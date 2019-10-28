@@ -1,4 +1,5 @@
-pub fn match_message_type(k: u16) -> MessageType {
+use super::MessageType;
+pub fn match_messagetype(k: u16) -> MessageType {
     match k {
         0 => MessageType::FileId,
         1 => MessageType::Capabilities,

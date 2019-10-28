@@ -1,5 +1,5 @@
 [package]
-name = "fitsdk-rs"
+name = "fitsdk"
 version = "0.1.0"
 authors = ["richard"]
 edition = "2018"

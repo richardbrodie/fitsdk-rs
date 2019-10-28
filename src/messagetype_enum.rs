@@ -85,6 +85,7 @@ pub enum MessageType {
     ExdDataConceptConfiguration,
     FieldDescription,
     DeveloperDataId,
+    DiveSummary,
     Pad,
     MfgRangeMax,
     MfgRangeMin,
