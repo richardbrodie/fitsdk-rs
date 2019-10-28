@@ -6,7 +6,7 @@ MATCH_MESSAGETYPE_FIELD_FILE = "match_messagetype_field.rs"
 MATCH_MESSAGETYPE_OFFSET_FILE = "match_messagetype_offset.rs"
 MATCH_MESSAGETYPE_SCALE_FILE = "match_messagetype_scale.rs"
 MATCH_MESSAGETYPE_FILE = "match_messagetype.rs"
-MATCH_FIELDTYPE_ENUM_FILE = "match_fieldtype.rs"
+MATCH_CUSTOM_FIELD_VALUE_FILE = "match_custom_field_value.rs"
 
 
 def camel_case(s):
@@ -189,19 +189,18 @@ def write_match_messagetype(map):
     f.close()
 
 
-def write_match_fieldtype(set_f, types_store):
-    f = open("src/" + MATCH_FIELDTYPE_ENUM_FILE, "w+")
+def write_match_custom_field_value(set_f, types_store):
+    f = open("src/" + MATCH_CUSTOM_FIELD_VALUE_FILE, "w+")
     f.writelines([
         "use super::FieldType;\n",
-        "pub fn match_fieldtype(f: FieldType, k: usize) -> Option<&'static str> {\n",
+        "pub fn match_custom_field_value(f: FieldType, k: usize) -> Option<&'static str> {\n",
         "    match f {\n"
     ])
     for ft in set_f:
         try:
             map = next(x['values'] for x in iter(types_store) if x['name'] == ft)
             f.write(f"        FieldType::{camel_case(ft)} => match k {{\n")
-            for k, v in map.items():
-                f.write(f"            {int(k, 0)} => Some(\"{v}\"),\n")
+            f.writelines(f"            {int(k, 0)} => Some(\"{v}\"),\n" for k, v in map.items())
             f.writelines([
                 "            _ => None,\n",
                 "        }\n"
@@ -263,4 +262,4 @@ write_match_message_field(msgs, msgs_list)
 write_match_message_offset(msgs, msgs_list)
 write_match_message_scale(msgs, msgs_list)
 write_match_messagetype(msg_types['values'])
-write_match_fieldtype(fields_set, types_list)
+write_match_custom_field_value(fields_set, types_list)
