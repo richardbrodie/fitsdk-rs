@@ -1,406 +1,11 @@
 use super::MessageType;
 type MatchOffsetFn = dyn Fn(usize) -> Option<i16>;
-fn match_offset_file_id(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_file_creator(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_timestamp_correlation(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_software(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_slave_device(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_capabilities(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_file_capabilities(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_mesg_capabilities(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_field_capabilities(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_device_settings(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_user_profile(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_hrm_profile(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_sdm_profile(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_bike_profile(k: usize) -> Option<i16> {
-    match k {
-        19 => Some(-110i16),
-        _ => None,
-    }
-}
-fn match_offset_connectivity(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_watchface_settings(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_ohr_settings(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_zones_target(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_sport(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_hr_zone(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_speed_zone(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_cadence_zone(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_power_zone(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_met_zone(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_dive_settings(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_dive_alarm(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_dive_gas(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_goal(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_activity(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_session(k: usize) -> Option<i16> {
-    match k {
-        49 => Some(500i16),
-        50 => Some(500i16),
-        71 => Some(500i16),
-        126 => Some(500i16),
-        127 => Some(500i16),
-        128 => Some(500i16),
-        _ => None,
-    }
-}
-fn match_offset_lap(k: usize) -> Option<i16> {
-    match k {
-        42 => Some(500i16),
-        43 => Some(500i16),
-        62 => Some(500i16),
-        112 => Some(500i16),
-        113 => Some(500i16),
-        114 => Some(500i16),
-        _ => None,
-    }
-}
-fn match_offset_length(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_record(k: usize) -> Option<i16> {
-    match k {
-        2 => Some(500i16),
-        78 => Some(500i16),
-        _ => None,
-    }
-}
-fn match_offset_event(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_device_info(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_training_file(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_hrv(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_weather_conditions(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_weather_alert(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_gps_metadata(k: usize) -> Option<i16> {
-    match k {
-        3 => Some(500i16),
-        _ => None,
-    }
-}
-fn match_offset_camera_event(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_gyroscope_data(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
 fn match_offset_accelerometer_data(k: usize) -> Option<i16> {
     match k {
         _ => None,
     }
 }
-fn match_offset_magnetometer_data(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_barometer_data(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_three_d_sensor_calibration(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_one_d_sensor_calibration(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_video_frame(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_obdii_data(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_nmea_sentence(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_aviation_attitude(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_video(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_video_title(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_video_description(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_video_clip(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_set(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_jump(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_course(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_course_point(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_segment_id(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_segment_leaderboard_entry(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_segment_point(k: usize) -> Option<i16> {
-    match k {
-        4 => Some(500i16),
-        _ => None,
-    }
-}
-fn match_offset_segment_lap(k: usize) -> Option<i16> {
-    match k {
-        34 => Some(500i16),
-        35 => Some(500i16),
-        54 => Some(500i16),
-        _ => None,
-    }
-}
-fn match_offset_segment_file(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_workout(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_workout_session(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_workout_step(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_exercise_title(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_schedule(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_totals(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_weight_scale(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_blood_pressure(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_monitoring_info(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_monitoring(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_hr(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_stress_level(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
-}
-fn match_offset_memo_glob(k: usize) -> Option<i16> {
+fn match_offset_activity(k: usize) -> Option<i16> {
     match k {
         _ => None,
     }
@@ -420,22 +25,53 @@ fn match_offset_ant_tx(k: usize) -> Option<i16> {
         _ => None,
     }
 }
-fn match_offset_exd_screen_configuration(k: usize) -> Option<i16> {
+fn match_offset_aviation_attitude(k: usize) -> Option<i16> {
     match k {
         _ => None,
     }
 }
-fn match_offset_exd_data_field_configuration(k: usize) -> Option<i16> {
+fn match_offset_barometer_data(k: usize) -> Option<i16> {
     match k {
         _ => None,
     }
 }
-fn match_offset_exd_data_concept_configuration(k: usize) -> Option<i16> {
+fn match_offset_bike_profile(k: usize) -> Option<i16> {
+    match k {
+        19 => Some(-110i16),
+        _ => None,
+    }
+}
+fn match_offset_blood_pressure(k: usize) -> Option<i16> {
     match k {
         _ => None,
     }
 }
-fn match_offset_field_description(k: usize) -> Option<i16> {
+fn match_offset_cadence_zone(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_camera_event(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_capabilities(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_connectivity(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_course(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_course_point(k: usize) -> Option<i16> {
     match k {
         _ => None,
     }
@@ -445,7 +81,371 @@ fn match_offset_developer_data_id(k: usize) -> Option<i16> {
         _ => None,
     }
 }
+fn match_offset_device_info(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_device_settings(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_dive_alarm(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_dive_gas(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_dive_settings(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
 fn match_offset_dive_summary(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_event(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_exd_data_concept_configuration(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_exd_data_field_configuration(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_exd_screen_configuration(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_exercise_title(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_field_capabilities(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_field_description(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_file_capabilities(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_file_creator(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_file_id(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_goal(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_gps_metadata(k: usize) -> Option<i16> {
+    match k {
+        3 => Some(500i16),
+        _ => None,
+    }
+}
+fn match_offset_gyroscope_data(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_hr(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_hr_zone(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_hrm_profile(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_hrv(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_jump(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_lap(k: usize) -> Option<i16> {
+    match k {
+        42 => Some(500i16),
+        43 => Some(500i16),
+        62 => Some(500i16),
+        112 => Some(500i16),
+        113 => Some(500i16),
+        114 => Some(500i16),
+        _ => None,
+    }
+}
+fn match_offset_length(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_magnetometer_data(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_memo_glob(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_mesg_capabilities(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_met_zone(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_monitoring(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_monitoring_info(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_nmea_sentence(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_obdii_data(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_ohr_settings(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_one_d_sensor_calibration(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_power_zone(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_record(k: usize) -> Option<i16> {
+    match k {
+        2 => Some(500i16),
+        78 => Some(500i16),
+        _ => None,
+    }
+}
+fn match_offset_schedule(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_sdm_profile(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_segment_file(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_segment_id(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_segment_lap(k: usize) -> Option<i16> {
+    match k {
+        34 => Some(500i16),
+        35 => Some(500i16),
+        54 => Some(500i16),
+        _ => None,
+    }
+}
+fn match_offset_segment_leaderboard_entry(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_segment_point(k: usize) -> Option<i16> {
+    match k {
+        4 => Some(500i16),
+        _ => None,
+    }
+}
+fn match_offset_session(k: usize) -> Option<i16> {
+    match k {
+        49 => Some(500i16),
+        50 => Some(500i16),
+        71 => Some(500i16),
+        126 => Some(500i16),
+        127 => Some(500i16),
+        128 => Some(500i16),
+        _ => None,
+    }
+}
+fn match_offset_set(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_slave_device(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_software(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_speed_zone(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_sport(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_stress_level(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_three_d_sensor_calibration(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_timestamp_correlation(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_totals(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_training_file(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_user_profile(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_video(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_video_clip(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_video_description(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_video_frame(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_video_title(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_watchface_settings(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_weather_alert(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_weather_conditions(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_weight_scale(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_workout(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_workout_session(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_workout_step(k: usize) -> Option<i16> {
+    match k {
+        _ => None,
+    }
+}
+fn match_offset_zones_target(k: usize) -> Option<i16> {
     match k {
         _ => None,
     }

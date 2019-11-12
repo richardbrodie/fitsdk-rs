@@ -27,9 +27,10 @@ def write_fieldtype_enum(set_ft):
         "#[derive(Debug, Copy, Clone, PartialEq)]\n",
         "pub enum FieldType {\n"
     ])
-    f.writelines(f"    {camel_case(v)},\n" for v in set_ft)
+    f.writelines(f"    {camel_case(v)},\n" for v in sorted(set_ft))
     f.writelines([
         "    Coordinates,\n"
+        "    Timestamp,\n",
         "    None,\n",
         "}\n"
     ])
@@ -42,7 +43,7 @@ def write_messagetype_enum(set_mt):
         "#[derive(Debug, Copy, Clone, PartialEq)]\n",
         "pub enum MessageType {\n"
     ])
-    f.writelines(f"    {camel_case(v)},\n" for v in set_mt)
+    f.writelines(f"    {camel_case(v)},\n" for v in sorted(set_mt))
     f.writelines([
         "    Pad,\n"
         "    MfgRangeMax,\n",
@@ -59,7 +60,7 @@ def write_match_message_field(set_mt, msgs_store):
         "use super::{FieldType, MessageType};\n",
         "type MatchFieldFn = dyn Fn(usize) -> FieldType;\n"
     ])
-    for message_type in set_mt:
+    for message_type in sorted(set_mt):
         values = next(x['values'] for x in iter(msgs_store) if x['name'] == message_type)
         values = sorted(values, key=lambda k: k['id'])
         f.writelines([
@@ -97,7 +98,7 @@ def write_match_message_offset(set_mt, msgs_store):
         "use super::MessageType;\n",
         "type MatchOffsetFn = dyn Fn(usize) -> Option<i16>;\n"
     ])
-    for message_type in set_mt:
+    for message_type in sorted(set_mt):
         values = next(x['values'] for x in iter(msgs_store) if x['name'] == message_type)
         values = sorted(values, key=lambda k: k['id'])
         f.writelines([
@@ -135,7 +136,7 @@ def write_match_message_scale(set_mt, msgs_store):
         "use super::MessageType;\n",
         "type MatchScaleFn = dyn Fn(usize) -> Option<f32>;\n"
     ])
-    for message_type in set_mt:
+    for message_type in sorted(set_mt):
         values = next(x['values'] for x in iter(msgs_store) if x['name'] == message_type)
         values = sorted(values, key=lambda k: k['id'])
         f.writelines([
@@ -196,7 +197,7 @@ def write_match_custom_field_value(set_f, types_store):
         "pub fn match_custom_field_value(f: FieldType, k: usize) -> Option<&'static str> {\n",
         "    match f {\n"
     ])
-    for ft in set_f:
+    for ft in sorted(set_f):
         try:
             map = next(x['values'] for x in iter(types_store) if x['name'] == ft)
             f.write(f"        FieldType::{camel_case(ft)} => match k {{\n")
@@ -247,6 +248,8 @@ for row in df.itertuples():
         fields_set.add(row[4])
         if row[3].endswith("_lat") or row[3].endswith("_long"):
             val = "Coordinates"
+        elif row[3].endswith("timestamp"):
+            val = "Timestamp"
         else:
             val = row[4]
         r = {'id': int(row[2]), 'field_name': row[3], 'field_type': val, 'scale': row[7], 'offset': row[8]}
