@@ -7,6 +7,7 @@ MATCH_MESSAGETYPE_OFFSET_FILE = "match_messagetype_offset.rs"
 MATCH_MESSAGETYPE_SCALE_FILE = "match_messagetype_scale.rs"
 MATCH_MESSAGETYPE_FILE = "match_messagetype.rs"
 MATCH_CUSTOM_FIELD_VALUE_FILE = "match_custom_field_value.rs"
+MATCH_MESSAGE_TIMESTAMP_FIELD_FILE = "match_message_timestamp_field.rs"
 
 
 def camel_case(s):
@@ -217,6 +218,28 @@ def write_match_custom_field_value(set_f, types_store):
     f.close()
 
 
+def write_match_message_timestamp_field(set_mt, msgs_store):
+    f = open("src/" + MATCH_MESSAGE_TIMESTAMP_FIELD_FILE, "w+")
+    f.writelines([
+        "use super::MessageType;\n",
+        "pub fn match_message_timestamp_field(mt: MessageType) -> Option<usize> {\n",
+        "    match mt {\n"
+    ])
+    for mt in sorted(set_mt):
+        try:
+            values = next(x['values'] for x in iter(msgs_store) if x['name'] == mt)
+            ts = next(x['id'] for x in iter(values) if x['field_type'] == "Timestamp")
+            f.write(f"        MessageType::{camel_case(mt)} => Some({ts}),\n")
+        except StopIteration:
+            pass
+    f.writelines([
+        "        _ => None\n",
+        "    }\n",
+        "}\n"
+    ])
+    f.close()
+
+
 df = pd.read_excel('Profile.xlsx', sheet_name='Types')
 types_list = []
 elem = {'values': {}}
@@ -266,3 +289,4 @@ write_match_message_offset(msgs, msgs_list)
 write_match_message_scale(msgs, msgs_list)
 write_match_messagetype(msg_types['values'])
 write_match_custom_field_value(fields_set, types_list)
+write_match_message_timestamp_field(msgs, msgs_list)
