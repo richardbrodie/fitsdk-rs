@@ -1,3 +1,4 @@
+/// An enum of all possible data types a `Message` field may be
 #[derive(Debug, Copy, Clone, PartialEq)]
 pub enum FieldType {
     Activity,

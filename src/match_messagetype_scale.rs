@@ -1,5 +1,5 @@
-use super::MessageType;
-type MatchScaleFn = dyn Fn(usize) -> Option<f32>;
+use super::{MessageType, MatchScaleFn};
+
 fn match_scale_accelerometer_data(k: usize) -> Option<f32> {
     match k {
         _ => None,
@@ -721,6 +721,21 @@ fn match_scale_zones_target(k: usize) -> Option<f32> {
 fn match_scale_none(_: usize) -> Option<f32> {
     return None;
 }
+
+/// Determines whether any SDK-defined `Message` defines a scale for any of its fields.
+///
+/// The method is called with a `MessageType` argument and returns a static closure which is called with a field_id `usize`
+/// and yields an `Option<f32>`.
+///
+/// # Example
+///
+/// ```
+/// let message_type = MessageType::Workout;
+/// let parsed_value = 14;
+/// let scale_fn = match_message_scale(message_type);
+/// let scale = scale_fn(parsed_value);
+/// assert_eq!(scale, Some(100.0));
+/// ```
 pub fn match_message_scale(m: MessageType) -> &'static MatchScaleFn {
     match m {
         MessageType::FileId => &|x: usize| match_scale_file_id(x),

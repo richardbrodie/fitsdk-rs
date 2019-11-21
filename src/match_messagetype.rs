@@ -1,4 +1,6 @@
 use super::MessageType;
+
+/// Convert a global_message_id into a `MessageType` enum
 pub fn match_messagetype(k: u16) -> MessageType {
     match k {
         0 => MessageType::FileId,

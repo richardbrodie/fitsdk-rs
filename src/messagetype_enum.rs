@@ -1,3 +1,4 @@
+/// an enum of all defined messages in the Fit SDK
 #[derive(Debug, Copy, Clone, PartialEq)]
 pub enum MessageType {
     AccelerometerData,

@@ -1,5 +1,5 @@
-use super::MessageType;
-type MatchOffsetFn = dyn Fn(usize) -> Option<i16>;
+use super::{MessageType, MatchOffsetFn};
+
 fn match_offset_accelerometer_data(k: usize) -> Option<i16> {
     match k {
         _ => None,
@@ -453,6 +453,21 @@ fn match_offset_zones_target(k: usize) -> Option<i16> {
 fn match_offset_none(_: usize) -> Option<i16> {
     return None;
 }
+
+/// Determines whether any SDK-defined `Message` defines an offset for any of its fields.
+///
+/// The method is called with a `MessageType` argument and returns a static closure which is called with a
+/// field_id `usize` which yields an `Option<i16>`.
+///
+/// # Example
+///
+/// ```
+/// let message_type = MessageType::Session;
+/// let parsed_value = 71;
+/// let offset_fn = match_message_offset(message_type);
+/// let offset = offset_fn(parsed_value);
+/// assert_eq!(offset, Some(500.0));
+/// ```
 pub fn match_message_offset(m: MessageType) -> &'static MatchOffsetFn {
     match m {
         MessageType::FileId => &|x: usize| match_offset_file_id(x),
