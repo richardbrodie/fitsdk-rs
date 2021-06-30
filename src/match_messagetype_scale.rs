@@ -1,9 +1,7 @@
-use super::{MessageType, MatchScaleFn};
+use super::{MatchScaleFn, MessageType};
 
-fn match_scale_accelerometer_data(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_accelerometer_data(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_activity(k: usize) -> Option<f32> {
     match k {
@@ -11,10 +9,8 @@ fn match_scale_activity(k: usize) -> Option<f32> {
         _ => None,
     }
 }
-fn match_scale_ant_channel_id(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_ant_channel_id(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_ant_rx(k: usize) -> Option<f32> {
     match k {
@@ -39,10 +35,8 @@ fn match_scale_aviation_attitude(k: usize) -> Option<f32> {
         _ => None,
     }
 }
-fn match_scale_barometer_data(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_barometer_data(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_bike_profile(k: usize) -> Option<f32> {
     match k {
@@ -55,35 +49,23 @@ fn match_scale_bike_profile(k: usize) -> Option<f32> {
         _ => None,
     }
 }
-fn match_scale_blood_pressure(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_blood_pressure(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_cadence_zone(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_cadence_zone(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_camera_event(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_camera_event(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_capabilities(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_capabilities(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_connectivity(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_connectivity(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_course(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_course(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_course_point(k: usize) -> Option<f32> {
     match k {
@@ -91,10 +73,8 @@ fn match_scale_course_point(k: usize) -> Option<f32> {
         _ => None,
     }
 }
-fn match_scale_developer_data_id(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_developer_data_id(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_device_info(k: usize) -> Option<f32> {
     match k {
@@ -116,10 +96,8 @@ fn match_scale_dive_alarm(k: usize) -> Option<f32> {
         _ => None,
     }
 }
-fn match_scale_dive_gas(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_dive_gas(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_dive_settings(k: usize) -> Option<f32> {
     match k {
@@ -144,60 +122,38 @@ fn match_scale_dive_summary(k: usize) -> Option<f32> {
         _ => None,
     }
 }
-fn match_scale_event(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_event(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_exd_data_concept_configuration(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_exd_data_concept_configuration(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_exd_data_field_configuration(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_exd_data_field_configuration(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_exd_screen_configuration(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_exd_screen_configuration(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_exercise_title(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_exercise_title(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_field_capabilities(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_field_capabilities(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_field_description(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_field_description(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_file_capabilities(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_file_capabilities(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_file_creator(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_file_creator(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_file_id(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_file_id(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_goal(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_goal(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_gps_metadata(k: usize) -> Option<f32> {
     match k {
@@ -208,10 +164,8 @@ fn match_scale_gps_metadata(k: usize) -> Option<f32> {
         _ => None,
     }
 }
-fn match_scale_gyroscope_data(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_gyroscope_data(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_hr(k: usize) -> Option<f32> {
     match k {
@@ -222,15 +176,11 @@ fn match_scale_hr(k: usize) -> Option<f32> {
         _ => None,
     }
 }
-fn match_scale_hr_zone(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_hr_zone(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_hrm_profile(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_hrm_profile(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_hrv(k: usize) -> Option<f32> {
     match k {
@@ -313,20 +263,14 @@ fn match_scale_length(k: usize) -> Option<f32> {
         _ => None,
     }
 }
-fn match_scale_magnetometer_data(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_magnetometer_data(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_memo_glob(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_memo_glob(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_mesg_capabilities(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_mesg_capabilities(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_met_zone(k: usize) -> Option<f32> {
     match k {
@@ -356,30 +300,20 @@ fn match_scale_monitoring_info(k: usize) -> Option<f32> {
         _ => None,
     }
 }
-fn match_scale_nmea_sentence(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_nmea_sentence(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_obdii_data(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_obdii_data(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_ohr_settings(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_ohr_settings(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_one_d_sensor_calibration(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_one_d_sensor_calibration(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_power_zone(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_power_zone(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_record(k: usize) -> Option<f32> {
     match k {
@@ -429,10 +363,8 @@ fn match_scale_record(k: usize) -> Option<f32> {
         _ => None,
     }
 }
-fn match_scale_schedule(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_schedule(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_sdm_profile(k: usize) -> Option<f32> {
     match k {
@@ -441,15 +373,11 @@ fn match_scale_sdm_profile(k: usize) -> Option<f32> {
         _ => None,
     }
 }
-fn match_scale_segment_file(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_segment_file(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_segment_id(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_segment_id(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_segment_lap(k: usize) -> Option<f32> {
     match k {
@@ -582,10 +510,8 @@ fn match_scale_set(k: usize) -> Option<f32> {
         _ => None,
     }
 }
-fn match_scale_slave_device(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_slave_device(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_software(k: usize) -> Option<f32> {
     match k {
@@ -599,15 +525,11 @@ fn match_scale_speed_zone(k: usize) -> Option<f32> {
         _ => None,
     }
 }
-fn match_scale_sport(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_sport(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_stress_level(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_stress_level(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_three_d_sensor_calibration(k: usize) -> Option<f32> {
     match k {
@@ -622,15 +544,11 @@ fn match_scale_timestamp_correlation(k: usize) -> Option<f32> {
         _ => None,
     }
 }
-fn match_scale_totals(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_totals(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_training_file(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_training_file(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_user_profile(k: usize) -> Option<f32> {
     match k {
@@ -641,40 +559,26 @@ fn match_scale_user_profile(k: usize) -> Option<f32> {
         _ => None,
     }
 }
-fn match_scale_video(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_video(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_video_clip(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_video_clip(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_video_description(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_video_description(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_video_frame(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_video_frame(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_video_title(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_video_title(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_watchface_settings(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_watchface_settings(_: usize) -> Option<f32> {
+    None
 }
-fn match_scale_weather_alert(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_weather_alert(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_weather_conditions(k: usize) -> Option<f32> {
     match k {
@@ -713,10 +617,8 @@ fn match_scale_workout_step(k: usize) -> Option<f32> {
         _ => None,
     }
 }
-fn match_scale_zones_target(k: usize) -> Option<f32> {
-    match k {
-        _ => None,
-    }
+fn match_scale_zones_target(_: usize) -> Option<f32> {
+    None
 }
 fn match_scale_none(_: usize) -> Option<f32> {
     return None;
@@ -736,94 +638,94 @@ fn match_scale_none(_: usize) -> Option<f32> {
 /// let scale = scale_fn(parsed_value);
 /// assert_eq!(scale, Some(100.0));
 /// ```
-pub fn match_message_scale(m: MessageType) -> &'static MatchScaleFn {
+pub fn match_message_scale(m: MessageType) -> MatchScaleFn {
     match m {
-        MessageType::FileId => &|x: usize| match_scale_file_id(x),
-        MessageType::FileCreator => &|x: usize| match_scale_file_creator(x),
-        MessageType::TimestampCorrelation => &|x: usize| match_scale_timestamp_correlation(x),
-        MessageType::Software => &|x: usize| match_scale_software(x),
-        MessageType::SlaveDevice => &|x: usize| match_scale_slave_device(x),
-        MessageType::Capabilities => &|x: usize| match_scale_capabilities(x),
-        MessageType::FileCapabilities => &|x: usize| match_scale_file_capabilities(x),
-        MessageType::MesgCapabilities => &|x: usize| match_scale_mesg_capabilities(x),
-        MessageType::FieldCapabilities => &|x: usize| match_scale_field_capabilities(x),
-        MessageType::DeviceSettings => &|x: usize| match_scale_device_settings(x),
-        MessageType::UserProfile => &|x: usize| match_scale_user_profile(x),
-        MessageType::HrmProfile => &|x: usize| match_scale_hrm_profile(x),
-        MessageType::SdmProfile => &|x: usize| match_scale_sdm_profile(x),
-        MessageType::BikeProfile => &|x: usize| match_scale_bike_profile(x),
-        MessageType::Connectivity => &|x: usize| match_scale_connectivity(x),
-        MessageType::WatchfaceSettings => &|x: usize| match_scale_watchface_settings(x),
-        MessageType::OhrSettings => &|x: usize| match_scale_ohr_settings(x),
-        MessageType::ZonesTarget => &|x: usize| match_scale_zones_target(x),
-        MessageType::Sport => &|x: usize| match_scale_sport(x),
-        MessageType::HrZone => &|x: usize| match_scale_hr_zone(x),
-        MessageType::SpeedZone => &|x: usize| match_scale_speed_zone(x),
-        MessageType::CadenceZone => &|x: usize| match_scale_cadence_zone(x),
-        MessageType::PowerZone => &|x: usize| match_scale_power_zone(x),
-        MessageType::MetZone => &|x: usize| match_scale_met_zone(x),
-        MessageType::DiveSettings => &|x: usize| match_scale_dive_settings(x),
-        MessageType::DiveAlarm => &|x: usize| match_scale_dive_alarm(x),
-        MessageType::DiveGas => &|x: usize| match_scale_dive_gas(x),
-        MessageType::Goal => &|x: usize| match_scale_goal(x),
-        MessageType::Activity => &|x: usize| match_scale_activity(x),
-        MessageType::Session => &|x: usize| match_scale_session(x),
-        MessageType::Lap => &|x: usize| match_scale_lap(x),
-        MessageType::Length => &|x: usize| match_scale_length(x),
-        MessageType::Record => &|x: usize| match_scale_record(x),
-        MessageType::Event => &|x: usize| match_scale_event(x),
-        MessageType::DeviceInfo => &|x: usize| match_scale_device_info(x),
-        MessageType::TrainingFile => &|x: usize| match_scale_training_file(x),
-        MessageType::Hrv => &|x: usize| match_scale_hrv(x),
-        MessageType::WeatherConditions => &|x: usize| match_scale_weather_conditions(x),
-        MessageType::WeatherAlert => &|x: usize| match_scale_weather_alert(x),
-        MessageType::GpsMetadata => &|x: usize| match_scale_gps_metadata(x),
-        MessageType::CameraEvent => &|x: usize| match_scale_camera_event(x),
-        MessageType::GyroscopeData => &|x: usize| match_scale_gyroscope_data(x),
-        MessageType::AccelerometerData => &|x: usize| match_scale_accelerometer_data(x),
-        MessageType::MagnetometerData => &|x: usize| match_scale_magnetometer_data(x),
-        MessageType::BarometerData => &|x: usize| match_scale_barometer_data(x),
-        MessageType::ThreeDSensorCalibration => &|x: usize| match_scale_three_d_sensor_calibration(x),
-        MessageType::OneDSensorCalibration => &|x: usize| match_scale_one_d_sensor_calibration(x),
-        MessageType::VideoFrame => &|x: usize| match_scale_video_frame(x),
-        MessageType::ObdiiData => &|x: usize| match_scale_obdii_data(x),
-        MessageType::NmeaSentence => &|x: usize| match_scale_nmea_sentence(x),
-        MessageType::AviationAttitude => &|x: usize| match_scale_aviation_attitude(x),
-        MessageType::Video => &|x: usize| match_scale_video(x),
-        MessageType::VideoTitle => &|x: usize| match_scale_video_title(x),
-        MessageType::VideoDescription => &|x: usize| match_scale_video_description(x),
-        MessageType::VideoClip => &|x: usize| match_scale_video_clip(x),
-        MessageType::Set => &|x: usize| match_scale_set(x),
-        MessageType::Jump => &|x: usize| match_scale_jump(x),
-        MessageType::Course => &|x: usize| match_scale_course(x),
-        MessageType::CoursePoint => &|x: usize| match_scale_course_point(x),
-        MessageType::SegmentId => &|x: usize| match_scale_segment_id(x),
-        MessageType::SegmentLeaderboardEntry => &|x: usize| match_scale_segment_leaderboard_entry(x),
-        MessageType::SegmentPoint => &|x: usize| match_scale_segment_point(x),
-        MessageType::SegmentLap => &|x: usize| match_scale_segment_lap(x),
-        MessageType::SegmentFile => &|x: usize| match_scale_segment_file(x),
-        MessageType::Workout => &|x: usize| match_scale_workout(x),
-        MessageType::WorkoutSession => &|x: usize| match_scale_workout_session(x),
-        MessageType::WorkoutStep => &|x: usize| match_scale_workout_step(x),
-        MessageType::ExerciseTitle => &|x: usize| match_scale_exercise_title(x),
-        MessageType::Schedule => &|x: usize| match_scale_schedule(x),
-        MessageType::Totals => &|x: usize| match_scale_totals(x),
-        MessageType::WeightScale => &|x: usize| match_scale_weight_scale(x),
-        MessageType::BloodPressure => &|x: usize| match_scale_blood_pressure(x),
-        MessageType::MonitoringInfo => &|x: usize| match_scale_monitoring_info(x),
-        MessageType::Monitoring => &|x: usize| match_scale_monitoring(x),
-        MessageType::Hr => &|x: usize| match_scale_hr(x),
-        MessageType::StressLevel => &|x: usize| match_scale_stress_level(x),
-        MessageType::MemoGlob => &|x: usize| match_scale_memo_glob(x),
-        MessageType::AntChannelId => &|x: usize| match_scale_ant_channel_id(x),
-        MessageType::AntRx => &|x: usize| match_scale_ant_rx(x),
-        MessageType::AntTx => &|x: usize| match_scale_ant_tx(x),
-        MessageType::ExdScreenConfiguration => &|x: usize| match_scale_exd_screen_configuration(x),
-        MessageType::ExdDataFieldConfiguration => &|x: usize| match_scale_exd_data_field_configuration(x),
-        MessageType::ExdDataConceptConfiguration => &|x: usize| match_scale_exd_data_concept_configuration(x),
-        MessageType::FieldDescription => &|x: usize| match_scale_field_description(x),
-        MessageType::DeveloperDataId => &|x: usize| match_scale_developer_data_id(x),
-        MessageType::DiveSummary => &|x: usize| match_scale_dive_summary(x),
-        _ => &|x: usize| match_scale_none(x)
+        MessageType::FileId => match_scale_file_id,
+        MessageType::FileCreator => match_scale_file_creator,
+        MessageType::TimestampCorrelation => match_scale_timestamp_correlation,
+        MessageType::Software => match_scale_software,
+        MessageType::SlaveDevice => match_scale_slave_device,
+        MessageType::Capabilities => match_scale_capabilities,
+        MessageType::FileCapabilities => match_scale_file_capabilities,
+        MessageType::MesgCapabilities => match_scale_mesg_capabilities,
+        MessageType::FieldCapabilities => match_scale_field_capabilities,
+        MessageType::DeviceSettings => match_scale_device_settings,
+        MessageType::UserProfile => match_scale_user_profile,
+        MessageType::HrmProfile => match_scale_hrm_profile,
+        MessageType::SdmProfile => match_scale_sdm_profile,
+        MessageType::BikeProfile => match_scale_bike_profile,
+        MessageType::Connectivity => match_scale_connectivity,
+        MessageType::WatchfaceSettings => match_scale_watchface_settings,
+        MessageType::OhrSettings => match_scale_ohr_settings,
+        MessageType::ZonesTarget => match_scale_zones_target,
+        MessageType::Sport => match_scale_sport,
+        MessageType::HrZone => match_scale_hr_zone,
+        MessageType::SpeedZone => match_scale_speed_zone,
+        MessageType::CadenceZone => match_scale_cadence_zone,
+        MessageType::PowerZone => match_scale_power_zone,
+        MessageType::MetZone => match_scale_met_zone,
+        MessageType::DiveSettings => match_scale_dive_settings,
+        MessageType::DiveAlarm => match_scale_dive_alarm,
+        MessageType::DiveGas => match_scale_dive_gas,
+        MessageType::Goal => match_scale_goal,
+        MessageType::Activity => match_scale_activity,
+        MessageType::Session => match_scale_session,
+        MessageType::Lap => match_scale_lap,
+        MessageType::Length => match_scale_length,
+        MessageType::Record => match_scale_record,
+        MessageType::Event => match_scale_event,
+        MessageType::DeviceInfo => match_scale_device_info,
+        MessageType::TrainingFile => match_scale_training_file,
+        MessageType::Hrv => match_scale_hrv,
+        MessageType::WeatherConditions => match_scale_weather_conditions,
+        MessageType::WeatherAlert => match_scale_weather_alert,
+        MessageType::GpsMetadata => match_scale_gps_metadata,
+        MessageType::CameraEvent => match_scale_camera_event,
+        MessageType::GyroscopeData => match_scale_gyroscope_data,
+        MessageType::AccelerometerData => match_scale_accelerometer_data,
+        MessageType::MagnetometerData => match_scale_magnetometer_data,
+        MessageType::BarometerData => match_scale_barometer_data,
+        MessageType::ThreeDSensorCalibration => match_scale_three_d_sensor_calibration,
+        MessageType::OneDSensorCalibration => match_scale_one_d_sensor_calibration,
+        MessageType::VideoFrame => match_scale_video_frame,
+        MessageType::ObdiiData => match_scale_obdii_data,
+        MessageType::NmeaSentence => match_scale_nmea_sentence,
+        MessageType::AviationAttitude => match_scale_aviation_attitude,
+        MessageType::Video => match_scale_video,
+        MessageType::VideoTitle => match_scale_video_title,
+        MessageType::VideoDescription => match_scale_video_description,
+        MessageType::VideoClip => match_scale_video_clip,
+        MessageType::Set => match_scale_set,
+        MessageType::Jump => match_scale_jump,
+        MessageType::Course => match_scale_course,
+        MessageType::CoursePoint => match_scale_course_point,
+        MessageType::SegmentId => match_scale_segment_id,
+        MessageType::SegmentLeaderboardEntry => match_scale_segment_leaderboard_entry,
+        MessageType::SegmentPoint => match_scale_segment_point,
+        MessageType::SegmentLap => match_scale_segment_lap,
+        MessageType::SegmentFile => match_scale_segment_file,
+        MessageType::Workout => match_scale_workout,
+        MessageType::WorkoutSession => match_scale_workout_session,
+        MessageType::WorkoutStep => match_scale_workout_step,
+        MessageType::ExerciseTitle => match_scale_exercise_title,
+        MessageType::Schedule => match_scale_schedule,
+        MessageType::Totals => match_scale_totals,
+        MessageType::WeightScale => match_scale_weight_scale,
+        MessageType::BloodPressure => match_scale_blood_pressure,
+        MessageType::MonitoringInfo => match_scale_monitoring_info,
+        MessageType::Monitoring => match_scale_monitoring,
+        MessageType::Hr => match_scale_hr,
+        MessageType::StressLevel => match_scale_stress_level,
+        MessageType::MemoGlob => match_scale_memo_glob,
+        MessageType::AntChannelId => match_scale_ant_channel_id,
+        MessageType::AntRx => match_scale_ant_rx,
+        MessageType::AntTx => match_scale_ant_tx,
+        MessageType::ExdScreenConfiguration => match_scale_exd_screen_configuration,
+        MessageType::ExdDataFieldConfiguration => match_scale_exd_data_field_configuration,
+        MessageType::ExdDataConceptConfiguration => match_scale_exd_data_concept_configuration,
+        MessageType::FieldDescription => match_scale_field_description,
+        MessageType::DeveloperDataId => match_scale_developer_data_id,
+        MessageType::DiveSummary => match_scale_dive_summary,
+        _ => match_scale_none,
     }
 }

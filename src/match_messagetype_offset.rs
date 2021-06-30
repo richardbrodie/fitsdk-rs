@@ -1,39 +1,25 @@
 use super::{MessageType, MatchOffsetFn};
 
-fn match_offset_accelerometer_data(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_accelerometer_data(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_activity(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_activity(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_ant_channel_id(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_ant_channel_id(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_ant_rx(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_ant_rx(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_ant_tx(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_ant_tx(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_aviation_attitude(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_aviation_attitude(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_barometer_data(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_barometer_data(_: usize) -> Option<i16> {
+    None
 }
 fn match_offset_bike_profile(k: usize) -> Option<i16> {
     match k {
@@ -41,130 +27,80 @@ fn match_offset_bike_profile(k: usize) -> Option<i16> {
         _ => None,
     }
 }
-fn match_offset_blood_pressure(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_blood_pressure(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_cadence_zone(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_cadence_zone(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_camera_event(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_camera_event(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_capabilities(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_capabilities(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_connectivity(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_connectivity(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_course(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_course(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_course_point(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_course_point(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_developer_data_id(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_developer_data_id(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_device_info(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_device_info(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_device_settings(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_device_settings(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_dive_alarm(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_dive_alarm(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_dive_gas(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_dive_gas(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_dive_settings(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_dive_settings(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_dive_summary(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_dive_summary(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_event(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_event(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_exd_data_concept_configuration(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_exd_data_concept_configuration(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_exd_data_field_configuration(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_exd_data_field_configuration(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_exd_screen_configuration(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_exd_screen_configuration(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_exercise_title(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_exercise_title(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_field_capabilities(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_field_capabilities(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_field_description(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_field_description(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_file_capabilities(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_file_capabilities(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_file_creator(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_file_creator(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_file_id(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_file_id(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_goal(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_goal(_: usize) -> Option<i16> {
+    None
 }
 fn match_offset_gps_metadata(k: usize) -> Option<i16> {
     match k {
@@ -172,35 +108,23 @@ fn match_offset_gps_metadata(k: usize) -> Option<i16> {
         _ => None,
     }
 }
-fn match_offset_gyroscope_data(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_gyroscope_data(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_hr(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_hr(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_hr_zone(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_hr_zone(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_hrm_profile(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_hrm_profile(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_hrv(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_hrv(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_jump(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_jump(_: usize) -> Option<i16> {
+    None
 }
 fn match_offset_lap(k: usize) -> Option<i16> {
     match k {
@@ -213,65 +137,41 @@ fn match_offset_lap(k: usize) -> Option<i16> {
         _ => None,
     }
 }
-fn match_offset_length(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_length(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_magnetometer_data(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_magnetometer_data(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_memo_glob(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_memo_glob(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_mesg_capabilities(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_mesg_capabilities(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_met_zone(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_met_zone(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_monitoring(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_monitoring(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_monitoring_info(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_monitoring_info(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_nmea_sentence(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_nmea_sentence(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_obdii_data(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_obdii_data(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_ohr_settings(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_ohr_settings(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_one_d_sensor_calibration(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_one_d_sensor_calibration(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_power_zone(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_power_zone(_: usize) -> Option<i16> {
+    None
 }
 fn match_offset_record(k: usize) -> Option<i16> {
     match k {
@@ -280,25 +180,17 @@ fn match_offset_record(k: usize) -> Option<i16> {
         _ => None,
     }
 }
-fn match_offset_schedule(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_schedule(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_sdm_profile(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_sdm_profile(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_segment_file(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_segment_file(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_segment_id(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_segment_id(_: usize) -> Option<i16> {
+    None
 }
 fn match_offset_segment_lap(k: usize) -> Option<i16> {
     match k {
@@ -308,10 +200,8 @@ fn match_offset_segment_lap(k: usize) -> Option<i16> {
         _ => None,
     }
 }
-fn match_offset_segment_leaderboard_entry(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_segment_leaderboard_entry(_: usize) -> Option<i16> {
+    None
 }
 fn match_offset_segment_point(k: usize) -> Option<i16> {
     match k {
@@ -330,128 +220,80 @@ fn match_offset_session(k: usize) -> Option<i16> {
         _ => None,
     }
 }
-fn match_offset_set(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_set(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_slave_device(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_slave_device(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_software(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_software(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_speed_zone(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_speed_zone(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_sport(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_sport(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_stress_level(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_stress_level(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_three_d_sensor_calibration(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_three_d_sensor_calibration(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_timestamp_correlation(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_timestamp_correlation(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_totals(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_totals(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_training_file(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_training_file(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_user_profile(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_user_profile(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_video(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_video(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_video_clip(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_video_clip(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_video_description(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_video_description(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_video_frame(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_video_frame(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_video_title(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_video_title(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_watchface_settings(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_watchface_settings(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_weather_alert(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_weather_alert(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_weather_conditions(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_weather_conditions(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_weight_scale(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_weight_scale(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_workout(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_workout(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_workout_session(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_workout_session(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_workout_step(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_workout_step(_: usize) -> Option<i16> {
+    None
 }
-fn match_offset_zones_target(k: usize) -> Option<i16> {
-    match k {
-        _ => None,
-    }
+fn match_offset_zones_target(_: usize) -> Option<i16> {
+    None
 }
 fn match_offset_none(_: usize) -> Option<i16> {
-    return None;
+    None
 }
 
 /// Determines whether any SDK-defined `Message` defines an offset for any of its fields.
@@ -468,94 +310,94 @@ fn match_offset_none(_: usize) -> Option<i16> {
 /// let offset = offset_fn(parsed_value);
 /// assert_eq!(offset, Some(500.0));
 /// ```
-pub fn match_message_offset(m: MessageType) -> &'static MatchOffsetFn {
+pub fn match_message_offset(m: MessageType) -> MatchOffsetFn {
     match m {
-        MessageType::FileId => &|x: usize| match_offset_file_id(x),
-        MessageType::FileCreator => &|x: usize| match_offset_file_creator(x),
-        MessageType::TimestampCorrelation => &|x: usize| match_offset_timestamp_correlation(x),
-        MessageType::Software => &|x: usize| match_offset_software(x),
-        MessageType::SlaveDevice => &|x: usize| match_offset_slave_device(x),
-        MessageType::Capabilities => &|x: usize| match_offset_capabilities(x),
-        MessageType::FileCapabilities => &|x: usize| match_offset_file_capabilities(x),
-        MessageType::MesgCapabilities => &|x: usize| match_offset_mesg_capabilities(x),
-        MessageType::FieldCapabilities => &|x: usize| match_offset_field_capabilities(x),
-        MessageType::DeviceSettings => &|x: usize| match_offset_device_settings(x),
-        MessageType::UserProfile => &|x: usize| match_offset_user_profile(x),
-        MessageType::HrmProfile => &|x: usize| match_offset_hrm_profile(x),
-        MessageType::SdmProfile => &|x: usize| match_offset_sdm_profile(x),
-        MessageType::BikeProfile => &|x: usize| match_offset_bike_profile(x),
-        MessageType::Connectivity => &|x: usize| match_offset_connectivity(x),
-        MessageType::WatchfaceSettings => &|x: usize| match_offset_watchface_settings(x),
-        MessageType::OhrSettings => &|x: usize| match_offset_ohr_settings(x),
-        MessageType::ZonesTarget => &|x: usize| match_offset_zones_target(x),
-        MessageType::Sport => &|x: usize| match_offset_sport(x),
-        MessageType::HrZone => &|x: usize| match_offset_hr_zone(x),
-        MessageType::SpeedZone => &|x: usize| match_offset_speed_zone(x),
-        MessageType::CadenceZone => &|x: usize| match_offset_cadence_zone(x),
-        MessageType::PowerZone => &|x: usize| match_offset_power_zone(x),
-        MessageType::MetZone => &|x: usize| match_offset_met_zone(x),
-        MessageType::DiveSettings => &|x: usize| match_offset_dive_settings(x),
-        MessageType::DiveAlarm => &|x: usize| match_offset_dive_alarm(x),
-        MessageType::DiveGas => &|x: usize| match_offset_dive_gas(x),
-        MessageType::Goal => &|x: usize| match_offset_goal(x),
-        MessageType::Activity => &|x: usize| match_offset_activity(x),
-        MessageType::Session => &|x: usize| match_offset_session(x),
-        MessageType::Lap => &|x: usize| match_offset_lap(x),
-        MessageType::Length => &|x: usize| match_offset_length(x),
-        MessageType::Record => &|x: usize| match_offset_record(x),
-        MessageType::Event => &|x: usize| match_offset_event(x),
-        MessageType::DeviceInfo => &|x: usize| match_offset_device_info(x),
-        MessageType::TrainingFile => &|x: usize| match_offset_training_file(x),
-        MessageType::Hrv => &|x: usize| match_offset_hrv(x),
-        MessageType::WeatherConditions => &|x: usize| match_offset_weather_conditions(x),
-        MessageType::WeatherAlert => &|x: usize| match_offset_weather_alert(x),
-        MessageType::GpsMetadata => &|x: usize| match_offset_gps_metadata(x),
-        MessageType::CameraEvent => &|x: usize| match_offset_camera_event(x),
-        MessageType::GyroscopeData => &|x: usize| match_offset_gyroscope_data(x),
-        MessageType::AccelerometerData => &|x: usize| match_offset_accelerometer_data(x),
-        MessageType::MagnetometerData => &|x: usize| match_offset_magnetometer_data(x),
-        MessageType::BarometerData => &|x: usize| match_offset_barometer_data(x),
-        MessageType::ThreeDSensorCalibration => &|x: usize| match_offset_three_d_sensor_calibration(x),
-        MessageType::OneDSensorCalibration => &|x: usize| match_offset_one_d_sensor_calibration(x),
-        MessageType::VideoFrame => &|x: usize| match_offset_video_frame(x),
-        MessageType::ObdiiData => &|x: usize| match_offset_obdii_data(x),
-        MessageType::NmeaSentence => &|x: usize| match_offset_nmea_sentence(x),
-        MessageType::AviationAttitude => &|x: usize| match_offset_aviation_attitude(x),
-        MessageType::Video => &|x: usize| match_offset_video(x),
-        MessageType::VideoTitle => &|x: usize| match_offset_video_title(x),
-        MessageType::VideoDescription => &|x: usize| match_offset_video_description(x),
-        MessageType::VideoClip => &|x: usize| match_offset_video_clip(x),
-        MessageType::Set => &|x: usize| match_offset_set(x),
-        MessageType::Jump => &|x: usize| match_offset_jump(x),
-        MessageType::Course => &|x: usize| match_offset_course(x),
-        MessageType::CoursePoint => &|x: usize| match_offset_course_point(x),
-        MessageType::SegmentId => &|x: usize| match_offset_segment_id(x),
-        MessageType::SegmentLeaderboardEntry => &|x: usize| match_offset_segment_leaderboard_entry(x),
-        MessageType::SegmentPoint => &|x: usize| match_offset_segment_point(x),
-        MessageType::SegmentLap => &|x: usize| match_offset_segment_lap(x),
-        MessageType::SegmentFile => &|x: usize| match_offset_segment_file(x),
-        MessageType::Workout => &|x: usize| match_offset_workout(x),
-        MessageType::WorkoutSession => &|x: usize| match_offset_workout_session(x),
-        MessageType::WorkoutStep => &|x: usize| match_offset_workout_step(x),
-        MessageType::ExerciseTitle => &|x: usize| match_offset_exercise_title(x),
-        MessageType::Schedule => &|x: usize| match_offset_schedule(x),
-        MessageType::Totals => &|x: usize| match_offset_totals(x),
-        MessageType::WeightScale => &|x: usize| match_offset_weight_scale(x),
-        MessageType::BloodPressure => &|x: usize| match_offset_blood_pressure(x),
-        MessageType::MonitoringInfo => &|x: usize| match_offset_monitoring_info(x),
-        MessageType::Monitoring => &|x: usize| match_offset_monitoring(x),
-        MessageType::Hr => &|x: usize| match_offset_hr(x),
-        MessageType::StressLevel => &|x: usize| match_offset_stress_level(x),
-        MessageType::MemoGlob => &|x: usize| match_offset_memo_glob(x),
-        MessageType::AntChannelId => &|x: usize| match_offset_ant_channel_id(x),
-        MessageType::AntRx => &|x: usize| match_offset_ant_rx(x),
-        MessageType::AntTx => &|x: usize| match_offset_ant_tx(x),
-        MessageType::ExdScreenConfiguration => &|x: usize| match_offset_exd_screen_configuration(x),
-        MessageType::ExdDataFieldConfiguration => &|x: usize| match_offset_exd_data_field_configuration(x),
-        MessageType::ExdDataConceptConfiguration => &|x: usize| match_offset_exd_data_concept_configuration(x),
-        MessageType::FieldDescription => &|x: usize| match_offset_field_description(x),
-        MessageType::DeveloperDataId => &|x: usize| match_offset_developer_data_id(x),
-        MessageType::DiveSummary => &|x: usize| match_offset_dive_summary(x),
-        _ => &|x: usize| match_offset_none(x)
+        MessageType::FileId => match_offset_file_id,
+        MessageType::FileCreator => match_offset_file_creator,
+        MessageType::TimestampCorrelation => match_offset_timestamp_correlation,
+        MessageType::Software => match_offset_software,
+        MessageType::SlaveDevice => match_offset_slave_device,
+        MessageType::Capabilities => match_offset_capabilities,
+        MessageType::FileCapabilities => match_offset_file_capabilities,
+        MessageType::MesgCapabilities => match_offset_mesg_capabilities,
+        MessageType::FieldCapabilities => match_offset_field_capabilities,
+        MessageType::DeviceSettings => match_offset_device_settings,
+        MessageType::UserProfile => match_offset_user_profile,
+        MessageType::HrmProfile => match_offset_hrm_profile,
+        MessageType::SdmProfile => match_offset_sdm_profile,
+        MessageType::BikeProfile => match_offset_bike_profile,
+        MessageType::Connectivity => match_offset_connectivity,
+        MessageType::WatchfaceSettings => match_offset_watchface_settings,
+        MessageType::OhrSettings => match_offset_ohr_settings,
+        MessageType::ZonesTarget => match_offset_zones_target,
+        MessageType::Sport => match_offset_sport,
+        MessageType::HrZone => match_offset_hr_zone,
+        MessageType::SpeedZone => match_offset_speed_zone,
+        MessageType::CadenceZone => match_offset_cadence_zone,
+        MessageType::PowerZone => match_offset_power_zone,
+        MessageType::MetZone => match_offset_met_zone,
+        MessageType::DiveSettings => match_offset_dive_settings,
+        MessageType::DiveAlarm => match_offset_dive_alarm,
+        MessageType::DiveGas => match_offset_dive_gas,
+        MessageType::Goal => match_offset_goal,
+        MessageType::Activity => match_offset_activity,
+        MessageType::Session => match_offset_session,
+        MessageType::Lap => match_offset_lap,
+        MessageType::Length => match_offset_length,
+        MessageType::Record => match_offset_record,
+        MessageType::Event => match_offset_event,
+        MessageType::DeviceInfo => match_offset_device_info,
+        MessageType::TrainingFile => match_offset_training_file,
+        MessageType::Hrv => match_offset_hrv,
+        MessageType::WeatherConditions => match_offset_weather_conditions,
+        MessageType::WeatherAlert => match_offset_weather_alert,
+        MessageType::GpsMetadata => match_offset_gps_metadata,
+        MessageType::CameraEvent => match_offset_camera_event,
+        MessageType::GyroscopeData => match_offset_gyroscope_data,
+        MessageType::AccelerometerData => match_offset_accelerometer_data,
+        MessageType::MagnetometerData => match_offset_magnetometer_data,
+        MessageType::BarometerData => match_offset_barometer_data,
+        MessageType::ThreeDSensorCalibration => match_offset_three_d_sensor_calibration,
+        MessageType::OneDSensorCalibration => match_offset_one_d_sensor_calibration,
+        MessageType::VideoFrame => match_offset_video_frame,
+        MessageType::ObdiiData => match_offset_obdii_data,
+        MessageType::NmeaSentence => match_offset_nmea_sentence,
+        MessageType::AviationAttitude => match_offset_aviation_attitude,
+        MessageType::Video => match_offset_video,
+        MessageType::VideoTitle => match_offset_video_title,
+        MessageType::VideoDescription => match_offset_video_description,
+        MessageType::VideoClip => match_offset_video_clip,
+        MessageType::Set => match_offset_set,
+        MessageType::Jump => match_offset_jump,
+        MessageType::Course => match_offset_course,
+        MessageType::CoursePoint => match_offset_course_point,
+        MessageType::SegmentId => match_offset_segment_id,
+        MessageType::SegmentLeaderboardEntry => match_offset_segment_leaderboard_entry,
+        MessageType::SegmentPoint => match_offset_segment_point,
+        MessageType::SegmentLap => match_offset_segment_lap,
+        MessageType::SegmentFile => match_offset_segment_file,
+        MessageType::Workout => match_offset_workout,
+        MessageType::WorkoutSession => match_offset_workout_session,
+        MessageType::WorkoutStep => match_offset_workout_step,
+        MessageType::ExerciseTitle => match_offset_exercise_title,
+        MessageType::Schedule => match_offset_schedule,
+        MessageType::Totals => match_offset_totals,
+        MessageType::WeightScale => match_offset_weight_scale,
+        MessageType::BloodPressure => match_offset_blood_pressure,
+        MessageType::MonitoringInfo => match_offset_monitoring_info,
+        MessageType::Monitoring => match_offset_monitoring,
+        MessageType::Hr => match_offset_hr,
+        MessageType::StressLevel => match_offset_stress_level,
+        MessageType::MemoGlob => match_offset_memo_glob,
+        MessageType::AntChannelId => match_offset_ant_channel_id,
+        MessageType::AntRx => match_offset_ant_rx,
+        MessageType::AntTx => match_offset_ant_tx,
+        MessageType::ExdScreenConfiguration => match_offset_exd_screen_configuration,
+        MessageType::ExdDataFieldConfiguration => match_offset_exd_data_field_configuration,
+        MessageType::ExdDataConceptConfiguration => match_offset_exd_data_concept_configuration,
+        MessageType::FieldDescription => match_offset_field_description,
+        MessageType::DeveloperDataId => match_offset_developer_data_id,
+        MessageType::DiveSummary => match_offset_dive_summary,
+        _ => match_offset_none
     }
 }

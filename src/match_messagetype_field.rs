@@ -14,7 +14,7 @@ fn match_field_accelerometer_data(k: usize) -> FieldType {
         9 => FieldType::Sint16,
         10 => FieldType::Sint16,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_activity(k: usize) -> FieldType {
@@ -27,7 +27,7 @@ fn match_field_activity(k: usize) -> FieldType {
         5 => FieldType::Timestamp,
         6 => FieldType::Uint8,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_ant_channel_id(k: usize) -> FieldType {
@@ -37,7 +37,7 @@ fn match_field_ant_channel_id(k: usize) -> FieldType {
         2 => FieldType::Uint16Z,
         3 => FieldType::Uint8Z,
         4 => FieldType::DeviceIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_ant_rx(k: usize) -> FieldType {
@@ -48,7 +48,7 @@ fn match_field_ant_rx(k: usize) -> FieldType {
         3 => FieldType::Uint8,
         4 => FieldType::Byte,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_ant_tx(k: usize) -> FieldType {
@@ -59,7 +59,7 @@ fn match_field_ant_tx(k: usize) -> FieldType {
         3 => FieldType::Uint8,
         4 => FieldType::Byte,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_aviation_attitude(k: usize) -> FieldType {
@@ -76,7 +76,7 @@ fn match_field_aviation_attitude(k: usize) -> FieldType {
         9 => FieldType::Uint16,
         10 => FieldType::AttitudeValidity,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_barometer_data(k: usize) -> FieldType {
@@ -85,7 +85,7 @@ fn match_field_barometer_data(k: usize) -> FieldType {
         1 => FieldType::Uint16,
         2 => FieldType::Uint32,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_bike_profile(k: usize) -> FieldType {
@@ -122,7 +122,7 @@ fn match_field_bike_profile(k: usize) -> FieldType {
         41 => FieldType::Uint8Z,
         44 => FieldType::Bool,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_blood_pressure(k: usize) -> FieldType {
@@ -138,7 +138,7 @@ fn match_field_blood_pressure(k: usize) -> FieldType {
         8 => FieldType::BpStatus,
         9 => FieldType::MessageIndex,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_cadence_zone(k: usize) -> FieldType {
@@ -146,7 +146,7 @@ fn match_field_cadence_zone(k: usize) -> FieldType {
         0 => FieldType::Uint8,
         1 => FieldType::String,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_camera_event(k: usize) -> FieldType {
@@ -156,7 +156,7 @@ fn match_field_camera_event(k: usize) -> FieldType {
         2 => FieldType::String,
         3 => FieldType::CameraOrientationType,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_capabilities(k: usize) -> FieldType {
@@ -165,7 +165,7 @@ fn match_field_capabilities(k: usize) -> FieldType {
         1 => FieldType::SportBits0,
         21 => FieldType::WorkoutCapabilities,
         23 => FieldType::ConnectivityCapabilities,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_connectivity(k: usize) -> FieldType {
@@ -183,7 +183,7 @@ fn match_field_connectivity(k: usize) -> FieldType {
         10 => FieldType::Bool,
         11 => FieldType::Bool,
         12 => FieldType::Bool,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_course(k: usize) -> FieldType {
@@ -192,7 +192,7 @@ fn match_field_course(k: usize) -> FieldType {
         5 => FieldType::String,
         6 => FieldType::CourseCapabilities,
         7 => FieldType::SubSport,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_course_point(k: usize) -> FieldType {
@@ -205,7 +205,7 @@ fn match_field_course_point(k: usize) -> FieldType {
         6 => FieldType::String,
         8 => FieldType::Bool,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_developer_data_id(k: usize) -> FieldType {
@@ -215,7 +215,7 @@ fn match_field_developer_data_id(k: usize) -> FieldType {
         2 => FieldType::Manufacturer,
         3 => FieldType::Uint8,
         4 => FieldType::Uint32,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_device_info(k: usize) -> FieldType {
@@ -238,7 +238,7 @@ fn match_field_device_info(k: usize) -> FieldType {
         25 => FieldType::SourceType,
         27 => FieldType::String,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_device_settings(k: usize) -> FieldType {
@@ -266,7 +266,7 @@ fn match_field_device_settings(k: usize) -> FieldType {
         94 => FieldType::Uint8,
         95 => FieldType::DisplayOrientation,
         134 => FieldType::Switch,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_dive_alarm(k: usize) -> FieldType {
@@ -278,7 +278,7 @@ fn match_field_dive_alarm(k: usize) -> FieldType {
         4 => FieldType::Tone,
         5 => FieldType::SubSport,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_dive_gas(k: usize) -> FieldType {
@@ -287,7 +287,7 @@ fn match_field_dive_gas(k: usize) -> FieldType {
         1 => FieldType::Uint8,
         2 => FieldType::DiveGasStatus,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_dive_settings(k: usize) -> FieldType {
@@ -314,7 +314,7 @@ fn match_field_dive_settings(k: usize) -> FieldType {
         19 => FieldType::SourceType,
         20 => FieldType::Uint8,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_dive_summary(k: usize) -> FieldType {
@@ -332,7 +332,7 @@ fn match_field_dive_summary(k: usize) -> FieldType {
         10 => FieldType::Uint32,
         11 => FieldType::Uint32,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_event(k: usize) -> FieldType {
@@ -350,7 +350,7 @@ fn match_field_event(k: usize) -> FieldType {
         12 => FieldType::Uint8Z,
         13 => FieldType::DeviceIndex,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_exd_data_concept_configuration(k: usize) -> FieldType {
@@ -366,7 +366,7 @@ fn match_field_exd_data_concept_configuration(k: usize) -> FieldType {
         9 => FieldType::ExdQualifiers,
         10 => FieldType::ExdDescriptors,
         11 => FieldType::Bool,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_exd_data_field_configuration(k: usize) -> FieldType {
@@ -377,7 +377,7 @@ fn match_field_exd_data_field_configuration(k: usize) -> FieldType {
         3 => FieldType::Uint8,
         4 => FieldType::ExdDisplayType,
         5 => FieldType::String,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_exd_screen_configuration(k: usize) -> FieldType {
@@ -386,7 +386,7 @@ fn match_field_exd_screen_configuration(k: usize) -> FieldType {
         1 => FieldType::Uint8,
         2 => FieldType::ExdLayout,
         3 => FieldType::Bool,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_exercise_title(k: usize) -> FieldType {
@@ -395,7 +395,7 @@ fn match_field_exercise_title(k: usize) -> FieldType {
         1 => FieldType::Uint16,
         2 => FieldType::String,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_field_capabilities(k: usize) -> FieldType {
@@ -405,7 +405,7 @@ fn match_field_field_capabilities(k: usize) -> FieldType {
         2 => FieldType::Uint8,
         3 => FieldType::Uint16,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_field_description(k: usize) -> FieldType {
@@ -424,7 +424,7 @@ fn match_field_field_description(k: usize) -> FieldType {
         13 => FieldType::FitBaseUnit,
         14 => FieldType::MesgNum,
         15 => FieldType::Uint8,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_file_capabilities(k: usize) -> FieldType {
@@ -435,14 +435,14 @@ fn match_field_file_capabilities(k: usize) -> FieldType {
         3 => FieldType::Uint16,
         4 => FieldType::Uint32,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_file_creator(k: usize) -> FieldType {
     match k {
         0 => FieldType::Uint16,
         1 => FieldType::Uint8,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_file_id(k: usize) -> FieldType {
@@ -454,7 +454,7 @@ fn match_field_file_id(k: usize) -> FieldType {
         4 => FieldType::DateTime,
         5 => FieldType::Uint16,
         8 => FieldType::String,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_goal(k: usize) -> FieldType {
@@ -472,7 +472,7 @@ fn match_field_goal(k: usize) -> FieldType {
         10 => FieldType::Bool,
         11 => FieldType::GoalSource,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_gps_metadata(k: usize) -> FieldType {
@@ -486,7 +486,7 @@ fn match_field_gps_metadata(k: usize) -> FieldType {
         6 => FieldType::Timestamp,
         7 => FieldType::Sint16,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_gyroscope_data(k: usize) -> FieldType {
@@ -500,7 +500,7 @@ fn match_field_gyroscope_data(k: usize) -> FieldType {
         6 => FieldType::Float32,
         7 => FieldType::Float32,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_hr(k: usize) -> FieldType {
@@ -511,7 +511,7 @@ fn match_field_hr(k: usize) -> FieldType {
         9 => FieldType::Timestamp,
         10 => FieldType::Byte,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_hr_zone(k: usize) -> FieldType {
@@ -519,7 +519,7 @@ fn match_field_hr_zone(k: usize) -> FieldType {
         1 => FieldType::Uint8,
         2 => FieldType::String,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_hrm_profile(k: usize) -> FieldType {
@@ -529,13 +529,13 @@ fn match_field_hrm_profile(k: usize) -> FieldType {
         2 => FieldType::Bool,
         3 => FieldType::Uint8Z,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_hrv(k: usize) -> FieldType {
     match k {
         0 => FieldType::Uint16,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_jump(k: usize) -> FieldType {
@@ -550,7 +550,7 @@ fn match_field_jump(k: usize) -> FieldType {
         7 => FieldType::Uint16,
         8 => FieldType::Uint32,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_lap(k: usize) -> FieldType {
@@ -666,7 +666,7 @@ fn match_field_lap(k: usize) -> FieldType {
         154 => FieldType::Float32,
         253 => FieldType::Timestamp,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_length(k: usize) -> FieldType {
@@ -689,7 +689,7 @@ fn match_field_length(k: usize) -> FieldType {
         21 => FieldType::Uint16,
         253 => FieldType::Timestamp,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_magnetometer_data(k: usize) -> FieldType {
@@ -703,7 +703,7 @@ fn match_field_magnetometer_data(k: usize) -> FieldType {
         6 => FieldType::Float32,
         7 => FieldType::Float32,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_memo_glob(k: usize) -> FieldType {
@@ -712,7 +712,7 @@ fn match_field_memo_glob(k: usize) -> FieldType {
         1 => FieldType::Uint16,
         2 => FieldType::MessageIndex,
         250 => FieldType::Uint32,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_mesg_capabilities(k: usize) -> FieldType {
@@ -722,7 +722,7 @@ fn match_field_mesg_capabilities(k: usize) -> FieldType {
         2 => FieldType::MesgCount,
         3 => FieldType::Uint16,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_met_zone(k: usize) -> FieldType {
@@ -731,7 +731,7 @@ fn match_field_met_zone(k: usize) -> FieldType {
         2 => FieldType::Uint16,
         3 => FieldType::Uint8,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_monitoring(k: usize) -> FieldType {
@@ -765,7 +765,7 @@ fn match_field_monitoring(k: usize) -> FieldType {
         33 => FieldType::Uint16,
         34 => FieldType::Uint16,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_monitoring_info(k: usize) -> FieldType {
@@ -776,7 +776,7 @@ fn match_field_monitoring_info(k: usize) -> FieldType {
         4 => FieldType::Uint16,
         5 => FieldType::Uint16,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_nmea_sentence(k: usize) -> FieldType {
@@ -784,7 +784,7 @@ fn match_field_nmea_sentence(k: usize) -> FieldType {
         0 => FieldType::Uint16,
         1 => FieldType::String,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_obdii_data(k: usize) -> FieldType {
@@ -798,14 +798,14 @@ fn match_field_obdii_data(k: usize) -> FieldType {
         6 => FieldType::Timestamp,
         7 => FieldType::Uint16,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_ohr_settings(k: usize) -> FieldType {
     match k {
         0 => FieldType::Switch,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_one_d_sensor_calibration(k: usize) -> FieldType {
@@ -816,7 +816,7 @@ fn match_field_one_d_sensor_calibration(k: usize) -> FieldType {
         3 => FieldType::Uint32,
         4 => FieldType::Sint32,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_power_zone(k: usize) -> FieldType {
@@ -824,7 +824,7 @@ fn match_field_power_zone(k: usize) -> FieldType {
         1 => FieldType::Uint16,
         2 => FieldType::String,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_record(k: usize) -> FieldType {
@@ -898,7 +898,7 @@ fn match_field_record(k: usize) -> FieldType {
         114 => FieldType::Float32,
         115 => FieldType::Float32,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_schedule(k: usize) -> FieldType {
@@ -910,7 +910,7 @@ fn match_field_schedule(k: usize) -> FieldType {
         4 => FieldType::Bool,
         5 => FieldType::Schedule,
         6 => FieldType::LocalDateTime,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_sdm_profile(k: usize) -> FieldType {
@@ -923,7 +923,7 @@ fn match_field_sdm_profile(k: usize) -> FieldType {
         5 => FieldType::Uint8Z,
         7 => FieldType::Uint8,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_segment_file(k: usize) -> FieldType {
@@ -937,7 +937,7 @@ fn match_field_segment_file(k: usize) -> FieldType {
         10 => FieldType::String,
         11 => FieldType::Uint8,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_segment_id(k: usize) -> FieldType {
@@ -951,7 +951,7 @@ fn match_field_segment_id(k: usize) -> FieldType {
         6 => FieldType::Uint8,
         7 => FieldType::SegmentDeleteStatus,
         8 => FieldType::SegmentSelectionType,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_segment_lap(k: usize) -> FieldType {
@@ -1046,7 +1046,7 @@ fn match_field_segment_lap(k: usize) -> FieldType {
         87 => FieldType::Float32,
         253 => FieldType::Timestamp,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_segment_leaderboard_entry(k: usize) -> FieldType {
@@ -1058,7 +1058,7 @@ fn match_field_segment_leaderboard_entry(k: usize) -> FieldType {
         4 => FieldType::Uint32,
         5 => FieldType::String,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_segment_point(k: usize) -> FieldType {
@@ -1069,7 +1069,7 @@ fn match_field_segment_point(k: usize) -> FieldType {
         4 => FieldType::Uint16,
         5 => FieldType::Uint32,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_session(k: usize) -> FieldType {
@@ -1198,7 +1198,7 @@ fn match_field_session(k: usize) -> FieldType {
         187 => FieldType::Float32,
         253 => FieldType::Timestamp,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_set(k: usize) -> FieldType {
@@ -1214,14 +1214,14 @@ fn match_field_set(k: usize) -> FieldType {
         10 => FieldType::MessageIndex,
         11 => FieldType::MessageIndex,
         254 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_slave_device(k: usize) -> FieldType {
     match k {
         0 => FieldType::Manufacturer,
         1 => FieldType::Uint16,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_software(k: usize) -> FieldType {
@@ -1229,7 +1229,7 @@ fn match_field_software(k: usize) -> FieldType {
         3 => FieldType::Uint16,
         5 => FieldType::String,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_speed_zone(k: usize) -> FieldType {
@@ -1237,7 +1237,7 @@ fn match_field_speed_zone(k: usize) -> FieldType {
         0 => FieldType::Uint16,
         1 => FieldType::String,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_sport(k: usize) -> FieldType {
@@ -1245,14 +1245,14 @@ fn match_field_sport(k: usize) -> FieldType {
         0 => FieldType::Sport,
         1 => FieldType::SubSport,
         3 => FieldType::String,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_stress_level(k: usize) -> FieldType {
     match k {
         0 => FieldType::Sint16,
         1 => FieldType::DateTime,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_three_d_sensor_calibration(k: usize) -> FieldType {
@@ -1264,7 +1264,7 @@ fn match_field_three_d_sensor_calibration(k: usize) -> FieldType {
         4 => FieldType::Sint32,
         5 => FieldType::Sint32,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_timestamp_correlation(k: usize) -> FieldType {
@@ -1276,7 +1276,7 @@ fn match_field_timestamp_correlation(k: usize) -> FieldType {
         4 => FieldType::Uint16,
         5 => FieldType::Uint16,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_totals(k: usize) -> FieldType {
@@ -1291,7 +1291,7 @@ fn match_field_totals(k: usize) -> FieldType {
         9 => FieldType::Uint8,
         253 => FieldType::Timestamp,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_training_file(k: usize) -> FieldType {
@@ -1302,7 +1302,7 @@ fn match_field_training_file(k: usize) -> FieldType {
         3 => FieldType::Uint32Z,
         4 => FieldType::DateTime,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_user_profile(k: usize) -> FieldType {
@@ -1336,7 +1336,7 @@ fn match_field_user_profile(k: usize) -> FieldType {
         47 => FieldType::DisplayMeasure,
         49 => FieldType::Uint32,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_video(k: usize) -> FieldType {
@@ -1344,7 +1344,7 @@ fn match_field_video(k: usize) -> FieldType {
         0 => FieldType::String,
         1 => FieldType::String,
         2 => FieldType::Uint32,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_video_clip(k: usize) -> FieldType {
@@ -1356,7 +1356,7 @@ fn match_field_video_clip(k: usize) -> FieldType {
         4 => FieldType::Uint16,
         6 => FieldType::Uint32,
         7 => FieldType::Uint32,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_video_description(k: usize) -> FieldType {
@@ -1364,7 +1364,7 @@ fn match_field_video_description(k: usize) -> FieldType {
         0 => FieldType::Uint16,
         1 => FieldType::String,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_video_frame(k: usize) -> FieldType {
@@ -1372,7 +1372,7 @@ fn match_field_video_frame(k: usize) -> FieldType {
         0 => FieldType::Uint16,
         1 => FieldType::Uint32,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_video_title(k: usize) -> FieldType {
@@ -1380,7 +1380,7 @@ fn match_field_video_title(k: usize) -> FieldType {
         0 => FieldType::Uint16,
         1 => FieldType::String,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_watchface_settings(k: usize) -> FieldType {
@@ -1388,7 +1388,7 @@ fn match_field_watchface_settings(k: usize) -> FieldType {
         0 => FieldType::WatchfaceMode,
         1 => FieldType::Byte,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_weather_alert(k: usize) -> FieldType {
@@ -1399,7 +1399,7 @@ fn match_field_weather_alert(k: usize) -> FieldType {
         3 => FieldType::WeatherSeverity,
         4 => FieldType::WeatherSevereType,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_weather_conditions(k: usize) -> FieldType {
@@ -1420,7 +1420,7 @@ fn match_field_weather_conditions(k: usize) -> FieldType {
         13 => FieldType::Sint8,
         14 => FieldType::Sint8,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_weight_scale(k: usize) -> FieldType {
@@ -1438,7 +1438,7 @@ fn match_field_weight_scale(k: usize) -> FieldType {
         11 => FieldType::Uint8,
         12 => FieldType::MessageIndex,
         253 => FieldType::Timestamp,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_workout(k: usize) -> FieldType {
@@ -1450,7 +1450,7 @@ fn match_field_workout(k: usize) -> FieldType {
         11 => FieldType::SubSport,
         14 => FieldType::Uint16,
         15 => FieldType::DisplayMeasure,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_workout_session(k: usize) -> FieldType {
@@ -1462,7 +1462,7 @@ fn match_field_workout_session(k: usize) -> FieldType {
         4 => FieldType::Uint16,
         5 => FieldType::DisplayMeasure,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_workout_step(k: usize) -> FieldType {
@@ -1482,7 +1482,7 @@ fn match_field_workout_step(k: usize) -> FieldType {
         12 => FieldType::Uint16,
         13 => FieldType::FitBaseUnit,
         254 => FieldType::MessageIndex,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_zones_target(k: usize) -> FieldType {
@@ -1492,7 +1492,7 @@ fn match_field_zones_target(k: usize) -> FieldType {
         3 => FieldType::Uint16,
         5 => FieldType::HrZoneCalc,
         7 => FieldType::PwrZoneCalc,
-        _ => FieldType::None
+        _ => FieldType::None,
     }
 }
 fn match_field_none(_: usize) -> FieldType {
@@ -1514,94 +1514,94 @@ fn match_field_none(_: usize) -> FieldType {
 /// let field = field_fn(parsed_value);
 /// assert_eq!(field, Field:type::Uint16);
 /// ```
-pub fn match_message_field(m: MessageType) -> &'static MatchFieldTypeFn {
+pub fn match_message_field(m: MessageType) -> MatchFieldTypeFn {
     match m {
-        MessageType::FileId => &|x: usize| match_field_file_id(x),
-        MessageType::FileCreator => &|x: usize| match_field_file_creator(x),
-        MessageType::TimestampCorrelation => &|x: usize| match_field_timestamp_correlation(x),
-        MessageType::Software => &|x: usize| match_field_software(x),
-        MessageType::SlaveDevice => &|x: usize| match_field_slave_device(x),
-        MessageType::Capabilities => &|x: usize| match_field_capabilities(x),
-        MessageType::FileCapabilities => &|x: usize| match_field_file_capabilities(x),
-        MessageType::MesgCapabilities => &|x: usize| match_field_mesg_capabilities(x),
-        MessageType::FieldCapabilities => &|x: usize| match_field_field_capabilities(x),
-        MessageType::DeviceSettings => &|x: usize| match_field_device_settings(x),
-        MessageType::UserProfile => &|x: usize| match_field_user_profile(x),
-        MessageType::HrmProfile => &|x: usize| match_field_hrm_profile(x),
-        MessageType::SdmProfile => &|x: usize| match_field_sdm_profile(x),
-        MessageType::BikeProfile => &|x: usize| match_field_bike_profile(x),
-        MessageType::Connectivity => &|x: usize| match_field_connectivity(x),
-        MessageType::WatchfaceSettings => &|x: usize| match_field_watchface_settings(x),
-        MessageType::OhrSettings => &|x: usize| match_field_ohr_settings(x),
-        MessageType::ZonesTarget => &|x: usize| match_field_zones_target(x),
-        MessageType::Sport => &|x: usize| match_field_sport(x),
-        MessageType::HrZone => &|x: usize| match_field_hr_zone(x),
-        MessageType::SpeedZone => &|x: usize| match_field_speed_zone(x),
-        MessageType::CadenceZone => &|x: usize| match_field_cadence_zone(x),
-        MessageType::PowerZone => &|x: usize| match_field_power_zone(x),
-        MessageType::MetZone => &|x: usize| match_field_met_zone(x),
-        MessageType::DiveSettings => &|x: usize| match_field_dive_settings(x),
-        MessageType::DiveAlarm => &|x: usize| match_field_dive_alarm(x),
-        MessageType::DiveGas => &|x: usize| match_field_dive_gas(x),
-        MessageType::Goal => &|x: usize| match_field_goal(x),
-        MessageType::Activity => &|x: usize| match_field_activity(x),
-        MessageType::Session => &|x: usize| match_field_session(x),
-        MessageType::Lap => &|x: usize| match_field_lap(x),
-        MessageType::Length => &|x: usize| match_field_length(x),
-        MessageType::Record => &|x: usize| match_field_record(x),
-        MessageType::Event => &|x: usize| match_field_event(x),
-        MessageType::DeviceInfo => &|x: usize| match_field_device_info(x),
-        MessageType::TrainingFile => &|x: usize| match_field_training_file(x),
-        MessageType::Hrv => &|x: usize| match_field_hrv(x),
-        MessageType::WeatherConditions => &|x: usize| match_field_weather_conditions(x),
-        MessageType::WeatherAlert => &|x: usize| match_field_weather_alert(x),
-        MessageType::GpsMetadata => &|x: usize| match_field_gps_metadata(x),
-        MessageType::CameraEvent => &|x: usize| match_field_camera_event(x),
-        MessageType::GyroscopeData => &|x: usize| match_field_gyroscope_data(x),
-        MessageType::AccelerometerData => &|x: usize| match_field_accelerometer_data(x),
-        MessageType::MagnetometerData => &|x: usize| match_field_magnetometer_data(x),
-        MessageType::BarometerData => &|x: usize| match_field_barometer_data(x),
-        MessageType::ThreeDSensorCalibration => &|x: usize| match_field_three_d_sensor_calibration(x),
-        MessageType::OneDSensorCalibration => &|x: usize| match_field_one_d_sensor_calibration(x),
-        MessageType::VideoFrame => &|x: usize| match_field_video_frame(x),
-        MessageType::ObdiiData => &|x: usize| match_field_obdii_data(x),
-        MessageType::NmeaSentence => &|x: usize| match_field_nmea_sentence(x),
-        MessageType::AviationAttitude => &|x: usize| match_field_aviation_attitude(x),
-        MessageType::Video => &|x: usize| match_field_video(x),
-        MessageType::VideoTitle => &|x: usize| match_field_video_title(x),
-        MessageType::VideoDescription => &|x: usize| match_field_video_description(x),
-        MessageType::VideoClip => &|x: usize| match_field_video_clip(x),
-        MessageType::Set => &|x: usize| match_field_set(x),
-        MessageType::Jump => &|x: usize| match_field_jump(x),
-        MessageType::Course => &|x: usize| match_field_course(x),
-        MessageType::CoursePoint => &|x: usize| match_field_course_point(x),
-        MessageType::SegmentId => &|x: usize| match_field_segment_id(x),
-        MessageType::SegmentLeaderboardEntry => &|x: usize| match_field_segment_leaderboard_entry(x),
-        MessageType::SegmentPoint => &|x: usize| match_field_segment_point(x),
-        MessageType::SegmentLap => &|x: usize| match_field_segment_lap(x),
-        MessageType::SegmentFile => &|x: usize| match_field_segment_file(x),
-        MessageType::Workout => &|x: usize| match_field_workout(x),
-        MessageType::WorkoutSession => &|x: usize| match_field_workout_session(x),
-        MessageType::WorkoutStep => &|x: usize| match_field_workout_step(x),
-        MessageType::ExerciseTitle => &|x: usize| match_field_exercise_title(x),
-        MessageType::Schedule => &|x: usize| match_field_schedule(x),
-        MessageType::Totals => &|x: usize| match_field_totals(x),
-        MessageType::WeightScale => &|x: usize| match_field_weight_scale(x),
-        MessageType::BloodPressure => &|x: usize| match_field_blood_pressure(x),
-        MessageType::MonitoringInfo => &|x: usize| match_field_monitoring_info(x),
-        MessageType::Monitoring => &|x: usize| match_field_monitoring(x),
-        MessageType::Hr => &|x: usize| match_field_hr(x),
-        MessageType::StressLevel => &|x: usize| match_field_stress_level(x),
-        MessageType::MemoGlob => &|x: usize| match_field_memo_glob(x),
-        MessageType::AntChannelId => &|x: usize| match_field_ant_channel_id(x),
-        MessageType::AntRx => &|x: usize| match_field_ant_rx(x),
-        MessageType::AntTx => &|x: usize| match_field_ant_tx(x),
-        MessageType::ExdScreenConfiguration => &|x: usize| match_field_exd_screen_configuration(x),
-        MessageType::ExdDataFieldConfiguration => &|x: usize| match_field_exd_data_field_configuration(x),
-        MessageType::ExdDataConceptConfiguration => &|x: usize| match_field_exd_data_concept_configuration(x),
-        MessageType::FieldDescription => &|x: usize| match_field_field_description(x),
-        MessageType::DeveloperDataId => &|x: usize| match_field_developer_data_id(x),
-        MessageType::DiveSummary => &|x: usize| match_field_dive_summary(x),
-        _ => &|x: usize| match_field_none(x)
+        MessageType::FileId => match_field_file_id,
+        MessageType::FileCreator => match_field_file_creator,
+        MessageType::TimestampCorrelation => match_field_timestamp_correlation,
+        MessageType::Software => match_field_software,
+        MessageType::SlaveDevice => match_field_slave_device,
+        MessageType::Capabilities => match_field_capabilities,
+        MessageType::FileCapabilities => match_field_file_capabilities,
+        MessageType::MesgCapabilities => match_field_mesg_capabilities,
+        MessageType::FieldCapabilities => match_field_field_capabilities,
+        MessageType::DeviceSettings => match_field_device_settings,
+        MessageType::UserProfile => match_field_user_profile,
+        MessageType::HrmProfile => match_field_hrm_profile,
+        MessageType::SdmProfile => match_field_sdm_profile,
+        MessageType::BikeProfile => match_field_bike_profile,
+        MessageType::Connectivity => match_field_connectivity,
+        MessageType::WatchfaceSettings => match_field_watchface_settings,
+        MessageType::OhrSettings => match_field_ohr_settings,
+        MessageType::ZonesTarget => match_field_zones_target,
+        MessageType::Sport => match_field_sport,
+        MessageType::HrZone => match_field_hr_zone,
+        MessageType::SpeedZone => match_field_speed_zone,
+        MessageType::CadenceZone => match_field_cadence_zone,
+        MessageType::PowerZone => match_field_power_zone,
+        MessageType::MetZone => match_field_met_zone,
+        MessageType::DiveSettings => match_field_dive_settings,
+        MessageType::DiveAlarm => match_field_dive_alarm,
+        MessageType::DiveGas => match_field_dive_gas,
+        MessageType::Goal => match_field_goal,
+        MessageType::Activity => match_field_activity,
+        MessageType::Session => match_field_session,
+        MessageType::Lap => match_field_lap,
+        MessageType::Length => match_field_length,
+        MessageType::Record => match_field_record,
+        MessageType::Event => match_field_event,
+        MessageType::DeviceInfo => match_field_device_info,
+        MessageType::TrainingFile => match_field_training_file,
+        MessageType::Hrv => match_field_hrv,
+        MessageType::WeatherConditions => match_field_weather_conditions,
+        MessageType::WeatherAlert => match_field_weather_alert,
+        MessageType::GpsMetadata => match_field_gps_metadata,
+        MessageType::CameraEvent => match_field_camera_event,
+        MessageType::GyroscopeData => match_field_gyroscope_data,
+        MessageType::AccelerometerData => match_field_accelerometer_data,
+        MessageType::MagnetometerData => match_field_magnetometer_data,
+        MessageType::BarometerData => match_field_barometer_data,
+        MessageType::ThreeDSensorCalibration => match_field_three_d_sensor_calibration,
+        MessageType::OneDSensorCalibration => match_field_one_d_sensor_calibration,
+        MessageType::VideoFrame => match_field_video_frame,
+        MessageType::ObdiiData => match_field_obdii_data,
+        MessageType::NmeaSentence => match_field_nmea_sentence,
+        MessageType::AviationAttitude => match_field_aviation_attitude,
+        MessageType::Video => match_field_video,
+        MessageType::VideoTitle => match_field_video_title,
+        MessageType::VideoDescription => match_field_video_description,
+        MessageType::VideoClip => match_field_video_clip,
+        MessageType::Set => match_field_set,
+        MessageType::Jump => match_field_jump,
+        MessageType::Course => match_field_course,
+        MessageType::CoursePoint => match_field_course_point,
+        MessageType::SegmentId => match_field_segment_id,
+        MessageType::SegmentLeaderboardEntry => match_field_segment_leaderboard_entry,
+        MessageType::SegmentPoint => match_field_segment_point,
+        MessageType::SegmentLap => match_field_segment_lap,
+        MessageType::SegmentFile => match_field_segment_file,
+        MessageType::Workout => match_field_workout,
+        MessageType::WorkoutSession => match_field_workout_session,
+        MessageType::WorkoutStep => match_field_workout_step,
+        MessageType::ExerciseTitle => match_field_exercise_title,
+        MessageType::Schedule => match_field_schedule,
+        MessageType::Totals => match_field_totals,
+        MessageType::WeightScale => match_field_weight_scale,
+        MessageType::BloodPressure => match_field_blood_pressure,
+        MessageType::MonitoringInfo => match_field_monitoring_info,
+        MessageType::Monitoring => match_field_monitoring,
+        MessageType::Hr => match_field_hr,
+        MessageType::StressLevel => match_field_stress_level,
+        MessageType::MemoGlob => match_field_memo_glob,
+        MessageType::AntChannelId => match_field_ant_channel_id,
+        MessageType::AntRx => match_field_ant_rx,
+        MessageType::AntTx => match_field_ant_tx,
+        MessageType::ExdScreenConfiguration => match_field_exd_screen_configuration,
+        MessageType::ExdDataFieldConfiguration => match_field_exd_data_field_configuration,
+        MessageType::ExdDataConceptConfiguration => match_field_exd_data_concept_configuration,
+        MessageType::FieldDescription => match_field_field_description,
+        MessageType::DeveloperDataId => match_field_developer_data_id,
+        MessageType::DiveSummary => match_field_dive_summary,
+        _ => match_field_none,
     }
 }

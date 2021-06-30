@@ -72,7 +72,7 @@ def write_match_message_field(set_mt, msgs_store):
         ])
         f.writelines(f"        {m['id']} => FieldType::{camel_case(m['field_type'])},\n" for m in values)
         f.writelines([
-            "        _ => FieldType::None\n",
+            "        _ => FieldType::None,\n",
             "    }\n"
             "}\n"
         ])
@@ -99,13 +99,13 @@ def write_match_message_field(set_mt, msgs_store):
 /// ```
 """)
     f.writelines([
-        "pub fn match_message_field(m: MessageType) -> &'static MatchFieldTypeFn {\n",
+        "pub fn match_message_field(m: MessageType) -> MatchFieldTypeFn {\n",
         "    match m {\n"
     ])
 
-    f.writelines(f"        MessageType::{camel_case(v)} => &|x: usize| match_field_{v.lower()}(x),\n" for v in set_mt)
+    f.writelines(f"        MessageType::{camel_case(v)} => match_field_{v.lower()},\n" for v in set_mt)
     f.writelines([
-        "        _ => &|x: usize| match_field_none(x)\n",
+        "        _ => match_field_none,\n",
         "    }\n",
         "}\n"
     ])
@@ -121,19 +121,28 @@ def write_match_message_offset(set_mt, msgs_store):
     for message_type in sorted(set_mt):
         values = next(x['values'] for x in iter(msgs_store) if x['name'] == message_type)
         values = sorted(values, key=lambda k: k['id'])
-        f.writelines([
-            f"fn match_offset_{message_type.lower()}(k: usize) -> Option<i16> {{\n",
-            "    match k {\n"
-        ])
-        f.writelines(f"        {m['id']} => Some({int(m['offset'])}i16),\n" for m in values if pd.notna(m['offset']))
-        f.writelines([
-            "        _ => None,\n",
-            "    }\n"
-            "}\n"
-        ])
+        v = [x for x in values if pd.notna(x['offset'])]
+        if v:
+            f.writelines([
+                f"fn match_offset_{message_type.lower()}(k: usize) -> Option<i16> {{\n",
+                "    match k {\n"
+            ])
+            f.writelines(f"        {m['id']} => Some({int(m['offset'])}i16),\n" for m in v)
+            f.writelines([
+                "        _ => None,\n",
+                "    }\n"
+            ])
+        else:
+            f.writelines([
+                f"fn match_offset_{message_type.lower()}(_: usize) -> Option<i16> {{\n",
+                "    None\n"
+            ])
+        f.writelines(
+                "}\n"
+        )
     f.writelines([
         "fn match_offset_none(_: usize) -> Option<i16> {\n",
-        "    return None;\n",
+        "    None\n",
         "}\n",
     ])
     f.write("""
@@ -153,13 +162,13 @@ def write_match_message_offset(set_mt, msgs_store):
 /// ```
 """)
     f.writelines([
-        "pub fn match_message_offset(m: MessageType) -> &'static MatchOffsetFn {\n",
+        "pub fn match_message_offset(m: MessageType) -> MatchOffsetFn {\n",
         "    match m {\n"
     ])
 
-    f.writelines(f"        MessageType::{camel_case(v)} => &|x: usize| match_offset_{v.lower()}(x),\n" for v in set_mt)
+    f.writelines(f"        MessageType::{camel_case(v)} => match_offset_{v.lower()},\n" for v in set_mt)
     f.writelines([
-        "        _ => &|x: usize| match_offset_none(x)\n",
+        "        _ => match_offset_none\n",
         "    }\n",
         "}\n"
     ])
@@ -175,23 +184,31 @@ def write_match_message_scale(set_mt, msgs_store):
     for message_type in sorted(set_mt):
         values = next(x['values'] for x in iter(msgs_store) if x['name'] == message_type)
         values = sorted(values, key=lambda k: k['id'])
-        f.writelines([
-            f"fn match_scale_{message_type.lower()}(k: usize) -> Option<f32> {{\n",
-            "    match k {\n"
-        ])
-        for m in values:
-            if pd.notna(m['scale']):
-                v = m['scale']
+        v = [x for x in values if pd.notna(x['scale'])]
+        if v:
+            f.writelines([
+                f"fn match_scale_{message_type.lower()}(k: usize) -> Option<f32> {{\n",
+                "    match k {\n"
+            ])
+            for m in v:
+                vv = m['scale']
                 try:
-                    v = m['scale'].split(',')[0]
+                    vv = m['scale'].split(',')[0]
                 except AttributeError:
                     pass
-                f.write(f"        {m['id']} => Some({float(v)}f32),\n")
-        f.writelines([
-            "        _ => None,\n",
-            "    }\n"
-            "}\n"
-        ])
+                f.write(f"        {m['id']} => Some({float(vv)}f32),\n")
+            f.writelines([
+                "        _ => None,\n",
+                "    }\n"
+            ])
+        else:
+            f.writelines([
+                f"fn match_scale_{message_type.lower()}(_: usize) -> Option<f32> {{\n",
+                "    None\n"
+            ])
+        f.writelines(
+                "}\n"
+        )
     f.writelines([
         "fn match_scale_none(_: usize) -> Option<f32> {\n",
         "    return None;\n",
@@ -214,12 +231,12 @@ def write_match_message_scale(set_mt, msgs_store):
 /// ```
 """)
     f.writelines([
-        "pub fn match_message_scale(m: MessageType) -> &'static MatchScaleFn {\n",
+        "pub fn match_message_scale(m: MessageType) -> MatchScaleFn {\n",
         "    match m {\n"
     ])
-    f.writelines(f"        MessageType::{camel_case(v)} => &|x: usize| match_scale_{v.lower()}(x),\n" for v in set_mt)
+    f.writelines(f"        MessageType::{camel_case(v)} => match_scale_{v.lower()},\n" for v in set_mt)
     f.writelines([
-        "        _ => &|x: usize| match_scale_none(x)\n",
+        "        _ => match_scale_none\n",
         "    }\n",
         "}\n"
     ])
@@ -263,7 +280,7 @@ def write_match_predefined_field_value(set_f, types_store):
 /// ```
 """)
     f.writelines([
-        "pub fn match_custom_field_value(f: FieldType, k: usize) -> Option<&'static str> {\n",
+        "pub fn match_predefined_field_value(f: FieldType, k: usize) -> Option<&'static str> {\n",
         "    match f {\n"
     ])
     for ft in sorted(set_f):
