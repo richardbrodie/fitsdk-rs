@@ -90,6 +90,7 @@ pub fn match_messagetype(k: u16) -> MessageType {
         264 => MessageType::ExerciseTitle,
         268 => MessageType::DiveSummary,
         285 => MessageType::Jump,
+        317 => MessageType::ClimbPro,
         0xFF00 => MessageType::MfgRangeMin,
         0xFFFE => MessageType::MfgRangeMax,
         _ => MessageType::None

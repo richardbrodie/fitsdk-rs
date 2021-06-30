@@ -1,4 +1,4 @@
-use super::{MatchScaleFn, MessageType};
+use super::{MessageType, MatchScaleFn};
 
 fn match_scale_accelerometer_data(_: usize) -> Option<f32> {
     None
@@ -59,6 +59,9 @@ fn match_scale_camera_event(_: usize) -> Option<f32> {
     None
 }
 fn match_scale_capabilities(_: usize) -> Option<f32> {
+    None
+}
+fn match_scale_climb_pro(_: usize) -> Option<f32> {
     None
 }
 fn match_scale_connectivity(_: usize) -> Option<f32> {
@@ -252,6 +255,11 @@ fn match_scale_lap(k: usize) -> Option<f32> {
         119 => Some(100.0f32),
         120 => Some(10.0f32),
         121 => Some(1000.0f32),
+        156 => Some(100.0f32),
+        157 => Some(100.0f32),
+        158 => Some(100.0f32),
+        159 => Some(100.0f32),
+        160 => Some(100.0f32),
         _ => None,
     }
 }
@@ -360,6 +368,7 @@ fn match_scale_record(k: usize) -> Option<f32> {
         95 => Some(1.0f32),
         96 => Some(1.0f32),
         98 => Some(1.0f32),
+        139 => Some(100.0f32),
         _ => None,
     }
 }
@@ -417,6 +426,8 @@ fn match_scale_segment_lap(k: usize) -> Option<f32> {
         76 => Some(0.7111111f32),
         77 => Some(0.7111111f32),
         78 => Some(0.7111111f32),
+        89 => Some(100.0f32),
+        90 => Some(100.0f32),
         _ => None,
     }
 }
@@ -500,6 +511,11 @@ fn match_scale_session(k: usize) -> Option<f32> {
         134 => Some(10.0f32),
         137 => Some(10.0f32),
         139 => Some(1000.0f32),
+        199 => Some(100.0f32),
+        200 => Some(100.0f32),
+        208 => Some(100.0f32),
+        209 => Some(100.0f32),
+        210 => Some(100.0f32),
         _ => None,
     }
 }
@@ -726,6 +742,7 @@ pub fn match_message_scale(m: MessageType) -> MatchScaleFn {
         MessageType::FieldDescription => match_scale_field_description,
         MessageType::DeveloperDataId => match_scale_developer_data_id,
         MessageType::DiveSummary => match_scale_dive_summary,
-        _ => match_scale_none,
+        MessageType::ClimbPro => match_scale_climb_pro,
+        _ => match_scale_none
     }
 }

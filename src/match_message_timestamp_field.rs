@@ -11,6 +11,7 @@ pub fn match_message_timestamp_field(mt: MessageType) -> Option<usize> {
         MessageType::BarometerData => Some(253),
         MessageType::BloodPressure => Some(253),
         MessageType::CameraEvent => Some(253),
+        MessageType::ClimbPro => Some(253),
         MessageType::CoursePoint => Some(1),
         MessageType::DeviceInfo => Some(253),
         MessageType::DiveSummary => Some(253),

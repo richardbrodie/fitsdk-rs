@@ -168,6 +168,18 @@ fn match_field_capabilities(k: usize) -> FieldType {
         _ => FieldType::None,
     }
 }
+fn match_field_climb_pro(k: usize) -> FieldType {
+    match k {
+        0 => FieldType::Coordinates,
+        1 => FieldType::Coordinates,
+        2 => FieldType::ClimbProEvent,
+        3 => FieldType::Uint16,
+        4 => FieldType::Uint8,
+        5 => FieldType::Float32,
+        253 => FieldType::Timestamp,
+        _ => FieldType::None,
+    }
+}
 fn match_field_connectivity(k: usize) -> FieldType {
     match k {
         0 => FieldType::Bool,
@@ -266,6 +278,7 @@ fn match_field_device_settings(k: usize) -> FieldType {
         94 => FieldType::Uint8,
         95 => FieldType::DisplayOrientation,
         134 => FieldType::Switch,
+        174 => FieldType::TapSensitivity,
         _ => FieldType::None,
     }
 }
@@ -349,6 +362,8 @@ fn match_field_event(k: usize) -> FieldType {
         11 => FieldType::Uint8Z,
         12 => FieldType::Uint8Z,
         13 => FieldType::DeviceIndex,
+        21 => FieldType::RadarThreatLevelType,
+        22 => FieldType::Uint8,
         253 => FieldType::Timestamp,
         _ => FieldType::None,
     }
@@ -664,6 +679,11 @@ fn match_field_lap(k: usize) -> FieldType {
         151 => FieldType::Uint16,
         153 => FieldType::Float32,
         154 => FieldType::Float32,
+        156 => FieldType::Uint8,
+        157 => FieldType::Uint8,
+        158 => FieldType::Uint16,
+        159 => FieldType::Uint16,
+        160 => FieldType::Uint16,
         253 => FieldType::Timestamp,
         254 => FieldType::MessageIndex,
         _ => FieldType::None,
@@ -897,6 +917,11 @@ fn match_field_record(k: usize) -> FieldType {
         98 => FieldType::Uint16,
         114 => FieldType::Float32,
         115 => FieldType::Float32,
+        117 => FieldType::Uint16,
+        118 => FieldType::Uint8,
+        119 => FieldType::Uint8,
+        120 => FieldType::Uint8,
+        139 => FieldType::Uint16,
         253 => FieldType::Timestamp,
         _ => FieldType::None,
     }
@@ -1044,6 +1069,8 @@ fn match_field_segment_lap(k: usize) -> FieldType {
         85 => FieldType::Float32,
         86 => FieldType::Float32,
         87 => FieldType::Float32,
+        89 => FieldType::Uint8,
+        90 => FieldType::Uint8,
         253 => FieldType::Timestamp,
         254 => FieldType::MessageIndex,
         _ => FieldType::None,
@@ -1106,6 +1133,7 @@ fn match_field_session(k: usize) -> FieldType {
         30 => FieldType::Coordinates,
         31 => FieldType::Coordinates,
         32 => FieldType::Coordinates,
+        33 => FieldType::Uint16,
         34 => FieldType::Uint16,
         35 => FieldType::Uint16,
         36 => FieldType::Uint16,
@@ -1196,6 +1224,11 @@ fn match_field_session(k: usize) -> FieldType {
         183 => FieldType::Uint16,
         186 => FieldType::Float32,
         187 => FieldType::Float32,
+        199 => FieldType::Uint8,
+        200 => FieldType::Uint8,
+        208 => FieldType::Uint16,
+        209 => FieldType::Uint16,
+        210 => FieldType::Uint16,
         253 => FieldType::Timestamp,
         254 => FieldType::MessageIndex,
         _ => FieldType::None,
@@ -1602,6 +1635,7 @@ pub fn match_message_field(m: MessageType) -> MatchFieldTypeFn {
         MessageType::FieldDescription => match_field_field_description,
         MessageType::DeveloperDataId => match_field_developer_data_id,
         MessageType::DiveSummary => match_field_dive_summary,
+        MessageType::ClimbPro => match_field_climb_pro,
         _ => match_field_none,
     }
 }

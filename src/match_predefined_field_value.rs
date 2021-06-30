@@ -211,6 +211,12 @@ pub fn match_predefined_field_value(f: FieldType, k: usize) -> Option<&'static s
             3 => Some("camera_orientation_270"),
             _ => None,
         }
+        FieldType::ClimbProEvent => match k {
+            0 => Some("approach"),
+            1 => Some("start"),
+            2 => Some("complete"),
+            _ => None,
+        }
         FieldType::ConnectivityCapabilities => match k {
             1 => Some("bluetooth"),
             2 => Some("bluetooth_le"),
@@ -435,6 +441,7 @@ pub fn match_predefined_field_value(f: FieldType, k: usize) -> Option<&'static s
             45 => Some("elev_high_alert"),
             46 => Some("elev_low_alert"),
             47 => Some("comm_timeout"),
+            75 => Some("radar_threat_alert"),
             _ => None,
         }
         FieldType::EventType => match k {
@@ -626,6 +633,7 @@ pub fn match_predefined_field_value(f: FieldType, k: usize) -> Option<&'static s
             5 => Some("full_quarter_split"),
             6 => Some("half_vertical_left_split"),
             7 => Some("half_horizontal_top_split"),
+            8 => Some("dynamic"),
             _ => None,
         }
         FieldType::ExdQualifiers => match k {
@@ -813,6 +821,9 @@ pub fn match_predefined_field_value(f: FieldType, k: usize) -> Option<&'static s
             1 => Some("rest"),
             2 => Some("warmup"),
             3 => Some("cooldown"),
+            4 => Some("recovery"),
+            5 => Some("interval"),
+            6 => Some("other"),
             _ => None,
         }
         FieldType::Language => match k {
@@ -932,6 +943,7 @@ pub fn match_predefined_field_value(f: FieldType, k: usize) -> Option<&'static s
             38 => Some("osynce"),
             39 => Some("holux"),
             40 => Some("concept2"),
+            41 => Some("shimano"),
             42 => Some("one_giant_leap"),
             43 => Some("ace_sensor"),
             44 => Some("brim_brothers"),
@@ -1017,6 +1029,13 @@ pub fn match_predefined_field_value(f: FieldType, k: usize) -> Option<&'static s
             126 => Some("iqsquare"),
             127 => Some("leomo"),
             128 => Some("ifit_com"),
+            129 => Some("coros_byte"),
+            130 => Some("versa_design"),
+            131 => Some("chileaf"),
+            132 => Some("cycplus"),
+            133 => Some("gravaa_byte"),
+            134 => Some("sigeyi"),
+            135 => Some("coospo"),
             255 => Some("development"),
             257 => Some("healthandlife"),
             258 => Some("lezyne"),
@@ -1061,6 +1080,18 @@ pub fn match_predefined_field_value(f: FieldType, k: usize) -> Option<&'static s
             297 => Some("cycligentinc"),
             298 => Some("trailforks"),
             299 => Some("mahle_ebikemotion"),
+            300 => Some("nurvv"),
+            301 => Some("microprogram"),
+            302 => Some("zone5cloud"),
+            303 => Some("greenteg"),
+            304 => Some("yamaha_motors"),
+            305 => Some("whoop"),
+            306 => Some("gravaa"),
+            307 => Some("onelap"),
+            308 => Some("monark_exercise"),
+            309 => Some("form"),
+            310 => Some("decathlon"),
+            311 => Some("syncros"),
             5759 => Some("actigraphcorp"),
             _ => None,
         }
@@ -1158,6 +1189,7 @@ pub fn match_predefined_field_value(f: FieldType, k: usize) -> Option<&'static s
             264 => Some("exercise_title"),
             268 => Some("dive_summary"),
             285 => Some("jump"),
+            317 => Some("climb_pro"),
             65280 => Some("mfg_range_min"),
             65534 => Some("mfg_range_max"),
             _ => None,
@@ -1171,6 +1203,13 @@ pub fn match_predefined_field_value(f: FieldType, k: usize) -> Option<&'static s
         FieldType::PwrZoneCalc => match k {
             0 => Some("custom"),
             1 => Some("percent_ftp"),
+            _ => None,
+        }
+        FieldType::RadarThreatLevelType => match k {
+            0 => Some("threat_unknown"),
+            1 => Some("threat_none"),
+            2 => Some("threat_approaching"),
+            3 => Some("threat_approaching_fast"),
             _ => None,
         }
         FieldType::Schedule => match k {
@@ -1291,6 +1330,7 @@ pub fn match_predefined_field_value(f: FieldType, k: usize) -> Option<&'static s
             46 => Some("jumpmaster"),
             47 => Some("boxing"),
             48 => Some("floor_climbing"),
+            53 => Some("diving"),
             254 => Some("all"),
             _ => None,
         }
@@ -1404,6 +1444,12 @@ pub fn match_predefined_field_value(f: FieldType, k: usize) -> Option<&'static s
             0 => Some("off"),
             1 => Some("on"),
             2 => Some("auto"),
+            _ => None,
+        }
+        FieldType::TapSensitivity => match k {
+            0 => Some("high"),
+            1 => Some("medium"),
+            2 => Some("low"),
             _ => None,
         }
         FieldType::TimeMode => match k {
@@ -1610,6 +1656,7 @@ pub fn match_predefined_field_value(f: FieldType, k: usize) -> Option<&'static s
             27 => Some("repeat_until_training_peaks_tss"),
             28 => Some("repetition_time"),
             29 => Some("reps"),
+            31 => Some("time_only"),
             _ => None,
         }
         FieldType::WktStepTarget => match k {

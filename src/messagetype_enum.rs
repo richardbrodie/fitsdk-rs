@@ -13,6 +13,7 @@ pub enum MessageType {
     CadenceZone,
     CameraEvent,
     Capabilities,
+    ClimbPro,
     Connectivity,
     Course,
     CoursePoint,
