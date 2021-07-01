@@ -1,4 +1,4 @@
-use super::{MessageType, MatchOffsetFn};
+use crate::{MessageType, MatchOffsetFn};
 
 fn match_offset_accelerometer_data(_: usize) -> Option<i16> {
     None
@@ -316,7 +316,7 @@ fn match_offset_none(_: usize) -> Option<i16> {
 /// let offset = offset_fn(parsed_value);
 /// assert_eq!(offset, Some(500.0));
 /// ```
-pub fn match_message_offset(m: MessageType) -> MatchOffsetFn {
+pub fn get_field_offset_fn(m: MessageType) -> MatchOffsetFn {
     match m {
         MessageType::FileId => match_offset_file_id,
         MessageType::FileCreator => match_offset_file_creator,

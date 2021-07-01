@@ -2,12 +2,15 @@ import pandas as pd
 
 FIELDTYPE_ENUM_FILE = "fieldtype_enum.rs"
 MESSAGETYPE_ENUM_FILE = "messagetype_enum.rs"
-MATCH_MESSAGETYPE_FIELD_FILE = "match_messagetype_field.rs"
-MATCH_MESSAGETYPE_OFFSET_FILE = "match_messagetype_offset.rs"
-MATCH_MESSAGETYPE_SCALE_FILE = "match_messagetype_scale.rs"
-MATCH_MESSAGETYPE_FILE = "match_messagetype.rs"
-MATCH_PREDEFINED_FIELD_VALUE_FILE = "match_predefined_field_value.rs"
-MATCH_MESSAGE_TIMESTAMP_FIELD_FILE = "match_message_timestamp_field.rs"
+
+GET_MESSAGE_TYPE_FILE = "get_message_type.rs"
+GET_MESSAGE_TIMESTAMP_FIELD_FILE = "get_message_timestamp_field.rs"
+
+GET_FIELD_TYPE_FILE = "get_field_type.rs"
+GET_FIELD_OFFSET_FILE = "get_field_offset.rs"
+GET_FIELD_SCALE_FILE = "get_field_scale.rs"
+GET_FIELD_STRING_VALUE_FILE = "get_field_string_value.rs"
+GET_FIELD_NAME_FILE = "get_field_name_value.rs"
 
 
 def camel_case(s):
@@ -23,7 +26,7 @@ def shouty_snake_case(s):
 
 
 def write_fieldtype_enum(set_ft):
-    f = open("src/" + FIELDTYPE_ENUM_FILE, "w+")
+    f = open("src/enums/" + FIELDTYPE_ENUM_FILE, "w+")
     f.writelines([
         "/// An enum of all possible data types a `Message` field may be\n",
         "#[derive(Debug, Copy, Clone, PartialEq)]\n",
@@ -40,7 +43,7 @@ def write_fieldtype_enum(set_ft):
 
 
 def write_messagetype_enum(set_mt):
-    f = open("src/" + MESSAGETYPE_ENUM_FILE, "w+")
+    f = open("src/enums/" + MESSAGETYPE_ENUM_FILE, "w+")
     f.writelines([
         "/// an enum of all defined messages in the Fit SDK\n",
         "#[derive(Debug, Copy, Clone, PartialEq)]\n",
@@ -57,10 +60,52 @@ def write_messagetype_enum(set_mt):
     f.close()
 
 
-def write_match_message_field(set_mt, msgs_store):
-    f = open("src/" + MATCH_MESSAGETYPE_FIELD_FILE, "w+")
+def write_get_message_type(map):
+    f = open("src/message_matchers/" + GET_MESSAGE_TYPE_FILE, "w+")
     f.writelines([
-        "use super::{FieldType, MessageType, MatchFieldTypeFn};\n",
+        "use crate::MessageType;\n",
+        "\n",
+        "/// Convert a global_message_id into a `MessageType` enum\n",
+        "pub fn get_message_type(k: u16) -> MessageType {\n",
+        "    match k {\n"
+    ])
+    f.writelines(f"        {k} => MessageType::{camel_case(v)},\n" for k, v in map.items())
+    f.writelines([
+        "        _ => MessageType::None\n",
+        "    }\n",
+        "}\n"
+    ])
+    f.close()
+
+
+def write_get_message_timestamp_field(set_mt, msgs_store):
+    f = open("src/message_matchers/" + GET_MESSAGE_TIMESTAMP_FIELD_FILE, "w+")
+    f.writelines([
+        "use crate::MessageType;\n",
+        "\n",
+        "/// A method for obtaining the field ID a specified `MessageType` uses for its timestamp. Usually it's 253 but unfortunately not always.\n",
+        "pub fn get_message_timestamp_field(mt: MessageType) -> Option<usize> {\n",
+        "    match mt {\n"
+    ])
+    for mt in sorted(set_mt):
+        try:
+            values = next(x['values'] for x in iter(msgs_store) if x['name'] == mt)
+            ts = next(x['id'] for x in iter(values) if x['field_type'] == "Timestamp")
+            f.write(f"        MessageType::{camel_case(mt)} => Some({ts}),\n")
+        except StopIteration:
+            pass
+    f.writelines([
+        "        _ => None\n",
+        "    }\n",
+        "}\n"
+    ])
+    f.close()
+
+
+def write_get_field_type(set_mt, msgs_store):
+    f = open("src/field_matchers/" + GET_FIELD_TYPE_FILE, "w+")
+    f.writelines([
+        "use crate::{FieldType, MessageType, MatchFieldTypeFn};\n",
         "\n"
     ])
     for message_type in sorted(set_mt):
@@ -85,7 +130,7 @@ def write_match_message_field(set_mt, msgs_store):
 /// Determines a specific `FieldType` of any `MessageType`.
 ///
 /// The method is called with a `MessageType` argument and returns a static closure
-/// which is called with a field_id `usize` and yields a `FieldType`.
+/// which is then called with a field_id `usize` and yields a `FieldType`.
 /// Any field that is not defined will return a `FieldType::None` variant.
 ///
 /// # Example
@@ -99,7 +144,7 @@ def write_match_message_field(set_mt, msgs_store):
 /// ```
 """)
     f.writelines([
-        "pub fn match_message_field(m: MessageType) -> MatchFieldTypeFn {\n",
+        "pub fn get_field_type_fn(m: MessageType) -> MatchFieldTypeFn {\n",
         "    match m {\n"
     ])
 
@@ -112,10 +157,10 @@ def write_match_message_field(set_mt, msgs_store):
     f.close()
 
 
-def write_match_message_offset(set_mt, msgs_store):
-    f = open("src/" + MATCH_MESSAGETYPE_OFFSET_FILE, "w+")
+def write_get_field_offset(set_mt, msgs_store):
+    f = open("src/field_matchers/" + GET_FIELD_OFFSET_FILE, "w+")
     f.writelines([
-        "use super::{MessageType, MatchOffsetFn};\n",
+        "use crate::{MessageType, MatchOffsetFn};\n",
         "\n"
     ])
     for message_type in sorted(set_mt):
@@ -162,7 +207,7 @@ def write_match_message_offset(set_mt, msgs_store):
 /// ```
 """)
     f.writelines([
-        "pub fn match_message_offset(m: MessageType) -> MatchOffsetFn {\n",
+        "pub fn get_field_offset_fn(m: MessageType) -> MatchOffsetFn {\n",
         "    match m {\n"
     ])
 
@@ -175,10 +220,10 @@ def write_match_message_offset(set_mt, msgs_store):
     f.close()
 
 
-def write_match_message_scale(set_mt, msgs_store):
-    f = open("src/" + MATCH_MESSAGETYPE_SCALE_FILE, "w+")
+def write_get_field_scale(set_mt, msgs_store):
+    f = open("src/field_matchers/" + GET_FIELD_SCALE_FILE, "w+")
     f.writelines([
-        "use super::{MessageType, MatchScaleFn};\n",
+        "use crate::{MessageType, MatchScaleFn};\n",
         "\n"
     ])
     for message_type in sorted(set_mt):
@@ -231,7 +276,7 @@ def write_match_message_scale(set_mt, msgs_store):
 /// ```
 """)
     f.writelines([
-        "pub fn match_message_scale(m: MessageType) -> MatchScaleFn {\n",
+        "pub fn get_field_scale_fn(m: MessageType) -> MatchScaleFn {\n",
         "    match m {\n"
     ])
     f.writelines(f"        MessageType::{camel_case(v)} => match_scale_{v.lower()},\n" for v in set_mt)
@@ -243,28 +288,10 @@ def write_match_message_scale(set_mt, msgs_store):
     f.close()
 
 
-def write_match_messagetype(map):
-    f = open("src/" + MATCH_MESSAGETYPE_FILE, "w+")
+def write_get_field_string_value(set_f, types_store):
+    f = open("src/field_matchers/" + GET_FIELD_STRING_VALUE_FILE, "w+")
     f.writelines([
-        "use super::MessageType;\n",
-        "\n",
-        "/// Convert a global_message_id into a `MessageType` enum\n",
-        "pub fn match_messagetype(k: u16) -> MessageType {\n",
-        "    match k {\n"
-    ])
-    f.writelines(f"        {k} => MessageType::{camel_case(v)},\n" for k, v in map.items())
-    f.writelines([
-        "        _ => MessageType::None\n",
-        "    }\n",
-        "}\n"
-    ])
-    f.close()
-
-
-def write_match_predefined_field_value(set_f, types_store):
-    f = open("src/" + MATCH_PREDEFINED_FIELD_VALUE_FILE, "w+")
-    f.writelines([
-        "use super::FieldType;\n",
+        "use crate::FieldType;\n",
         "\n",
     ])
     f.write("""
@@ -280,7 +307,7 @@ def write_match_predefined_field_value(set_f, types_store):
 /// ```
 """)
     f.writelines([
-        "pub fn match_predefined_field_value(f: FieldType, k: usize) -> Option<&'static str> {\n",
+        "pub fn get_field_string_value_fn(f: FieldType, k: usize) -> Option<&'static str> {\n",
         "    match f {\n"
     ])
     for ft in sorted(set_f):
@@ -296,30 +323,6 @@ def write_match_predefined_field_value(set_f, types_store):
             pass
     f.writelines([
         "        FieldType::None => None,\n",
-        "        _ => None\n",
-        "    }\n",
-        "}\n"
-    ])
-    f.close()
-
-
-def write_match_message_timestamp_field(set_mt, msgs_store):
-    f = open("src/" + MATCH_MESSAGE_TIMESTAMP_FIELD_FILE, "w+")
-    f.writelines([
-        "use super::MessageType;\n",
-        "\n",
-        "/// A method for obtaining the field ID a specified `MessageType` uses for its timestamp. Usually it's 253 but unfortunately not always.\n",
-        "pub fn match_message_timestamp_field(mt: MessageType) -> Option<usize> {\n",
-        "    match mt {\n"
-    ])
-    for mt in sorted(set_mt):
-        try:
-            values = next(x['values'] for x in iter(msgs_store) if x['name'] == mt)
-            ts = next(x['id'] for x in iter(values) if x['field_type'] == "Timestamp")
-            f.write(f"        MessageType::{camel_case(mt)} => Some({ts}),\n")
-        except StopIteration:
-            pass
-    f.writelines([
         "        _ => None\n",
         "    }\n",
         "}\n"
@@ -371,9 +374,11 @@ msgs = [x['name'] for x in msgs_list]
 
 write_fieldtype_enum(fields_set)
 write_messagetype_enum(msgs)
-write_match_message_field(msgs, msgs_list)
-write_match_message_offset(msgs, msgs_list)
-write_match_message_scale(msgs, msgs_list)
-write_match_messagetype(msg_types['values'])
-write_match_predefined_field_value(fields_set, types_list)
-write_match_message_timestamp_field(msgs, msgs_list)
+
+write_get_message_type(msg_types['values'])
+write_get_message_timestamp_field(msgs, msgs_list)
+
+write_get_field_type(msgs, msgs_list)
+write_get_field_offset(msgs, msgs_list)
+write_get_field_scale(msgs, msgs_list)
+write_get_field_string_value(fields_set, types_list)

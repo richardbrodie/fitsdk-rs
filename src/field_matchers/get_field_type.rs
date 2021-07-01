@@ -1,4 +1,4 @@
-use super::{FieldType, MessageType, MatchFieldTypeFn};
+use crate::{FieldType, MessageType, MatchFieldTypeFn};
 
 fn match_field_accelerometer_data(k: usize) -> FieldType {
     match k {
@@ -1535,7 +1535,7 @@ fn match_field_none(_: usize) -> FieldType {
 /// Determines a specific `FieldType` of any `MessageType`.
 ///
 /// The method is called with a `MessageType` argument and returns a static closure
-/// which is called with a field_id `usize` and yields a `FieldType`.
+/// which is then called with a field_id `usize` and yields a `FieldType`.
 /// Any field that is not defined will return a `FieldType::None` variant.
 ///
 /// # Example
@@ -1547,7 +1547,7 @@ fn match_field_none(_: usize) -> FieldType {
 /// let field = field_fn(parsed_value);
 /// assert_eq!(field, Field:type::Uint16);
 /// ```
-pub fn match_message_field(m: MessageType) -> MatchFieldTypeFn {
+pub fn get_field_type_fn(m: MessageType) -> MatchFieldTypeFn {
     match m {
         MessageType::FileId => match_field_file_id,
         MessageType::FileCreator => match_field_file_creator,

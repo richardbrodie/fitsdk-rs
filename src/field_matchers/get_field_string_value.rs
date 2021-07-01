@@ -1,4 +1,4 @@
-use super::FieldType;
+use crate::FieldType;
 
 
 /// Certain `FieldType` values refer to predefined text strings in the SDK.
@@ -11,7 +11,7 @@ use super::FieldType;
 /// let predefined_text = match_predefined_field_value(field_type, parsed_value);
 /// assert_eq!(predefined_text, Some("left_forearm_extensors"));
 /// ```
-pub fn match_predefined_field_value(f: FieldType, k: usize) -> Option<&'static str> {
+pub fn get_field_string_value_fn(f: FieldType, k: usize) -> Option<&'static str> {
     match f {
         FieldType::Activity => match k {
             0 => Some("manual"),

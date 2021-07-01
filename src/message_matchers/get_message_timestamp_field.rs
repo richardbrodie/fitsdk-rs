@@ -1,7 +1,7 @@
-use super::MessageType;
+use crate::MessageType;
 
 /// A method for obtaining the field ID a specified `MessageType` uses for its timestamp. Usually it's 253 but unfortunately not always.
-pub fn match_message_timestamp_field(mt: MessageType) -> Option<usize> {
+pub fn get_message_timestamp_field(mt: MessageType) -> Option<usize> {
     match mt {
         MessageType::AccelerometerData => Some(253),
         MessageType::Activity => Some(253),

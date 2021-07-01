@@ -1,7 +1,7 @@
-use super::MessageType;
+use crate::MessageType;
 
 /// Convert a global_message_id into a `MessageType` enum
-pub fn match_messagetype(k: u16) -> MessageType {
+pub fn get_message_type(k: u16) -> MessageType {
     match k {
         0 => MessageType::FileId,
         1 => MessageType::Capabilities,

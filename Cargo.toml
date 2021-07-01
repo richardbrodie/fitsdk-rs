@@ -1,6 +1,6 @@
 [package]
 name = "fitsdk"
-version = "0.1.0"
+version = "0.1.5"
 authors = ["Richard Brodie <richard@radagast.nu>"]
 license = "MIT"
 description = "A small crate which provides a simple API exposing the FIT SDK."

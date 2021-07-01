@@ -1,4 +1,4 @@
-use super::{MessageType, MatchScaleFn};
+use crate::{MessageType, MatchScaleFn};
 
 fn match_scale_accelerometer_data(_: usize) -> Option<f32> {
     None
@@ -654,7 +654,7 @@ fn match_scale_none(_: usize) -> Option<f32> {
 /// let scale = scale_fn(parsed_value);
 /// assert_eq!(scale, Some(100.0));
 /// ```
-pub fn match_message_scale(m: MessageType) -> MatchScaleFn {
+pub fn get_field_scale_fn(m: MessageType) -> MatchScaleFn {
     match m {
         MessageType::FileId => match_scale_file_id,
         MessageType::FileCreator => match_scale_file_creator,
