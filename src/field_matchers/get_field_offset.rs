@@ -54,14 +54,14 @@ fn match_offset_course_point(_: usize) -> Option<i16> {
 fn match_offset_developer_data_id(_: usize) -> Option<i16> {
     None
 }
+fn match_offset_device_aux_battery_info(_: usize) -> Option<i16> {
+    None
+}
 fn match_offset_device_info(_: usize) -> Option<i16> {
     None
 }
-fn match_offset_device_settings(k: usize) -> Option<i16> {
-    match k {
-        174 => Some(1i16),
-        _ => None,
-    }
+fn match_offset_device_settings(_: usize) -> Option<i16> {
+    None
 }
 fn match_offset_dive_alarm(_: usize) -> Option<i16> {
     None
@@ -353,8 +353,8 @@ pub fn get_field_offset_fn(m: MessageType) -> MatchOffsetFn {
         MessageType::Record => match_offset_record,
         MessageType::Event => match_offset_event,
         MessageType::DeviceInfo => match_offset_device_info,
+        MessageType::DeviceAuxBatteryInfo => match_offset_device_aux_battery_info,
         MessageType::TrainingFile => match_offset_training_file,
-        MessageType::Hrv => match_offset_hrv,
         MessageType::WeatherConditions => match_offset_weather_conditions,
         MessageType::WeatherAlert => match_offset_weather_alert,
         MessageType::GpsMetadata => match_offset_gps_metadata,
@@ -375,6 +375,9 @@ pub fn get_field_offset_fn(m: MessageType) -> MatchOffsetFn {
         MessageType::VideoClip => match_offset_video_clip,
         MessageType::Set => match_offset_set,
         MessageType::Jump => match_offset_jump,
+        MessageType::ClimbPro => match_offset_climb_pro,
+        MessageType::FieldDescription => match_offset_field_description,
+        MessageType::DeveloperDataId => match_offset_developer_data_id,
         MessageType::Course => match_offset_course,
         MessageType::CoursePoint => match_offset_course_point,
         MessageType::SegmentId => match_offset_segment_id,
@@ -401,10 +404,8 @@ pub fn get_field_offset_fn(m: MessageType) -> MatchOffsetFn {
         MessageType::ExdScreenConfiguration => match_offset_exd_screen_configuration,
         MessageType::ExdDataFieldConfiguration => match_offset_exd_data_field_configuration,
         MessageType::ExdDataConceptConfiguration => match_offset_exd_data_concept_configuration,
-        MessageType::FieldDescription => match_offset_field_description,
-        MessageType::DeveloperDataId => match_offset_developer_data_id,
         MessageType::DiveSummary => match_offset_dive_summary,
-        MessageType::ClimbPro => match_offset_climb_pro,
+        MessageType::Hrv => match_offset_hrv,
         _ => match_offset_none
     }
 }

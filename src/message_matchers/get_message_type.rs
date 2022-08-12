@@ -91,6 +91,7 @@ pub fn get_message_type(k: u16) -> MessageType {
         268 => MessageType::DiveSummary,
         285 => MessageType::Jump,
         317 => MessageType::ClimbPro,
+        375 => MessageType::DeviceAuxBatteryInfo,
         0xFF00 => MessageType::MfgRangeMin,
         0xFFFE => MessageType::MfgRangeMax,
         _ => MessageType::None

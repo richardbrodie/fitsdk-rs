@@ -79,6 +79,12 @@ fn match_scale_course_point(k: usize) -> Option<f32> {
 fn match_scale_developer_data_id(_: usize) -> Option<f32> {
     None
 }
+fn match_scale_device_aux_battery_info(k: usize) -> Option<f32> {
+    match k {
+        1 => Some(256.0f32),
+        _ => None,
+    }
+}
 fn match_scale_device_info(k: usize) -> Option<f32> {
     match k {
         5 => Some(100.0f32),
@@ -122,11 +128,20 @@ fn match_scale_dive_summary(k: usize) -> Option<f32> {
         7 => Some(1.0f32),
         8 => Some(1.0f32),
         11 => Some(1000.0f32),
+        17 => Some(1000.0f32),
+        22 => Some(1000.0f32),
+        23 => Some(1000.0f32),
+        24 => Some(1000.0f32),
+        25 => Some(1000.0f32),
         _ => None,
     }
 }
-fn match_scale_event(_: usize) -> Option<f32> {
-    None
+fn match_scale_event(k: usize) -> Option<f32> {
+    match k {
+        23 => Some(10.0f32),
+        24 => Some(10.0f32),
+        _ => None,
+    }
 }
 fn match_scale_exd_data_concept_configuration(_: usize) -> Option<f32> {
     None
@@ -511,6 +526,7 @@ fn match_scale_session(k: usize) -> Option<f32> {
         134 => Some(10.0f32),
         137 => Some(10.0f32),
         139 => Some(1000.0f32),
+        168 => Some(65536.0f32),
         199 => Some(100.0f32),
         200 => Some(100.0f32),
         208 => Some(100.0f32),
@@ -691,8 +707,8 @@ pub fn get_field_scale_fn(m: MessageType) -> MatchScaleFn {
         MessageType::Record => match_scale_record,
         MessageType::Event => match_scale_event,
         MessageType::DeviceInfo => match_scale_device_info,
+        MessageType::DeviceAuxBatteryInfo => match_scale_device_aux_battery_info,
         MessageType::TrainingFile => match_scale_training_file,
-        MessageType::Hrv => match_scale_hrv,
         MessageType::WeatherConditions => match_scale_weather_conditions,
         MessageType::WeatherAlert => match_scale_weather_alert,
         MessageType::GpsMetadata => match_scale_gps_metadata,
@@ -713,6 +729,9 @@ pub fn get_field_scale_fn(m: MessageType) -> MatchScaleFn {
         MessageType::VideoClip => match_scale_video_clip,
         MessageType::Set => match_scale_set,
         MessageType::Jump => match_scale_jump,
+        MessageType::ClimbPro => match_scale_climb_pro,
+        MessageType::FieldDescription => match_scale_field_description,
+        MessageType::DeveloperDataId => match_scale_developer_data_id,
         MessageType::Course => match_scale_course,
         MessageType::CoursePoint => match_scale_course_point,
         MessageType::SegmentId => match_scale_segment_id,
@@ -739,10 +758,8 @@ pub fn get_field_scale_fn(m: MessageType) -> MatchScaleFn {
         MessageType::ExdScreenConfiguration => match_scale_exd_screen_configuration,
         MessageType::ExdDataFieldConfiguration => match_scale_exd_data_field_configuration,
         MessageType::ExdDataConceptConfiguration => match_scale_exd_data_concept_configuration,
-        MessageType::FieldDescription => match_scale_field_description,
-        MessageType::DeveloperDataId => match_scale_developer_data_id,
         MessageType::DiveSummary => match_scale_dive_summary,
-        MessageType::ClimbPro => match_scale_climb_pro,
+        MessageType::Hrv => match_scale_hrv,
         _ => match_scale_none
     }
 }

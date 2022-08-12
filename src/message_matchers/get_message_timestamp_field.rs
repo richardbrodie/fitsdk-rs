@@ -13,6 +13,7 @@ pub fn get_message_timestamp_field(mt: MessageType) -> Option<usize> {
         MessageType::CameraEvent => Some(253),
         MessageType::ClimbPro => Some(253),
         MessageType::CoursePoint => Some(1),
+        MessageType::DeviceAuxBatteryInfo => Some(253),
         MessageType::DeviceInfo => Some(253),
         MessageType::DiveSummary => Some(253),
         MessageType::Event => Some(253),
