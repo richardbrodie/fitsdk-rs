@@ -140,7 +140,7 @@ def write_get_field_type(set_mt, msgs_store):
 /// let parsed_value = 3;
 /// let field_fn = match_message_field(message_type);
 /// let field = field_fn(parsed_value);
-/// assert_eq!(field, Field:type::Uint16);
+/// assert_eq!(field, FieldType::Uint16);
 /// ```
 """)
     f.writelines([

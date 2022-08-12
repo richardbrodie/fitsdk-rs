@@ -1568,7 +1568,7 @@ fn match_field_none(_: usize) -> FieldType {
 /// let parsed_value = 3;
 /// let field_fn = match_message_field(message_type);
 /// let field = field_fn(parsed_value);
-/// assert_eq!(field, Field:type::Uint16);
+/// assert_eq!(field, FieldType::Uint16);
 /// ```
 pub fn get_field_type_fn(m: MessageType) -> MatchFieldTypeFn {
     match m {
