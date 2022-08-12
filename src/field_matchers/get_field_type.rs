@@ -230,6 +230,16 @@ fn match_field_developer_data_id(k: usize) -> FieldType {
         _ => FieldType::None,
     }
 }
+fn match_field_device_aux_battery_info(k: usize) -> FieldType {
+    match k {
+        0 => FieldType::DeviceIndex,
+        1 => FieldType::Uint16,
+        2 => FieldType::BatteryStatus,
+        3 => FieldType::Uint8,
+        253 => FieldType::Timestamp,
+        _ => FieldType::None,
+    }
+}
 fn match_field_device_info(k: usize) -> FieldType {
     match k {
         0 => FieldType::DeviceIndex,
@@ -249,6 +259,7 @@ fn match_field_device_info(k: usize) -> FieldType {
         22 => FieldType::AntNetwork,
         25 => FieldType::SourceType,
         27 => FieldType::String,
+        32 => FieldType::Uint8,
         253 => FieldType::Timestamp,
         _ => FieldType::None,
     }
@@ -344,6 +355,11 @@ fn match_field_dive_summary(k: usize) -> FieldType {
         9 => FieldType::Uint16,
         10 => FieldType::Uint32,
         11 => FieldType::Uint32,
+        17 => FieldType::Sint32,
+        22 => FieldType::Uint32,
+        23 => FieldType::Uint32,
+        24 => FieldType::Uint32,
+        25 => FieldType::Uint32,
         253 => FieldType::Timestamp,
         _ => FieldType::None,
     }
@@ -364,6 +380,8 @@ fn match_field_event(k: usize) -> FieldType {
         13 => FieldType::DeviceIndex,
         21 => FieldType::RadarThreatLevelType,
         22 => FieldType::Uint8,
+        23 => FieldType::Uint8,
+        24 => FieldType::Uint8,
         253 => FieldType::Timestamp,
         _ => FieldType::None,
     }
@@ -1219,6 +1237,7 @@ fn match_field_session(k: usize) -> FieldType {
         134 => FieldType::Uint16,
         137 => FieldType::Uint8,
         139 => FieldType::Uint16,
+        168 => FieldType::Sint32,
         181 => FieldType::Float32,
         182 => FieldType::Float32,
         183 => FieldType::Uint16,
@@ -1514,6 +1533,10 @@ fn match_field_workout_step(k: usize) -> FieldType {
         11 => FieldType::Uint16,
         12 => FieldType::Uint16,
         13 => FieldType::FitBaseUnit,
+        19 => FieldType::WktStepTarget,
+        20 => FieldType::Uint32,
+        21 => FieldType::Uint32,
+        22 => FieldType::Uint32,
         254 => FieldType::MessageIndex,
         _ => FieldType::None,
     }
@@ -1584,8 +1607,8 @@ pub fn get_field_type_fn(m: MessageType) -> MatchFieldTypeFn {
         MessageType::Record => match_field_record,
         MessageType::Event => match_field_event,
         MessageType::DeviceInfo => match_field_device_info,
+        MessageType::DeviceAuxBatteryInfo => match_field_device_aux_battery_info,
         MessageType::TrainingFile => match_field_training_file,
-        MessageType::Hrv => match_field_hrv,
         MessageType::WeatherConditions => match_field_weather_conditions,
         MessageType::WeatherAlert => match_field_weather_alert,
         MessageType::GpsMetadata => match_field_gps_metadata,
@@ -1606,6 +1629,9 @@ pub fn get_field_type_fn(m: MessageType) -> MatchFieldTypeFn {
         MessageType::VideoClip => match_field_video_clip,
         MessageType::Set => match_field_set,
         MessageType::Jump => match_field_jump,
+        MessageType::ClimbPro => match_field_climb_pro,
+        MessageType::FieldDescription => match_field_field_description,
+        MessageType::DeveloperDataId => match_field_developer_data_id,
         MessageType::Course => match_field_course,
         MessageType::CoursePoint => match_field_course_point,
         MessageType::SegmentId => match_field_segment_id,
@@ -1632,10 +1658,8 @@ pub fn get_field_type_fn(m: MessageType) -> MatchFieldTypeFn {
         MessageType::ExdScreenConfiguration => match_field_exd_screen_configuration,
         MessageType::ExdDataFieldConfiguration => match_field_exd_data_field_configuration,
         MessageType::ExdDataConceptConfiguration => match_field_exd_data_concept_configuration,
-        MessageType::FieldDescription => match_field_field_description,
-        MessageType::DeveloperDataId => match_field_developer_data_id,
         MessageType::DiveSummary => match_field_dive_summary,
-        MessageType::ClimbPro => match_field_climb_pro,
+        MessageType::Hrv => match_field_hrv,
         _ => match_field_none,
     }
 }

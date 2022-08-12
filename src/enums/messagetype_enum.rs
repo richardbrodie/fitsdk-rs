@@ -18,6 +18,7 @@ pub enum MessageType {
     Course,
     CoursePoint,
     DeveloperDataId,
+    DeviceAuxBatteryInfo,
     DeviceInfo,
     DeviceSettings,
     DiveAlarm,
