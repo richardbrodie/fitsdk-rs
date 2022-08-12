@@ -7,6 +7,6 @@ description = "A small crate which provides a simple API exposing the FIT SDK."
 documentation = "https://docs.rs/fitsdk"
 repository = "https://github.com/richardbrodie/fitsdk-rs"
 edition = "2018"
-sdk_version = "21.54.01"
+sdk_version = "21.84.00"
 
 [dependencies]
